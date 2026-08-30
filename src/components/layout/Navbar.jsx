@@ -137,13 +137,13 @@ export default function Navbar({ activeTab, setActiveTab }) {
             })}
           </div>
 
-          {/* WhatsApp CTA Action Button */}
+          {/* WhatsApp CTA Action Button (Bright Red/Yellowish Red Accent) */}
           <div className="hidden sm:flex items-center gap-2">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-whatsapp text-xs sm:text-sm py-2.5 px-4 shadow-md flex items-center gap-2"
+              className="bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-rose-500 text-white font-bold text-xs sm:text-sm py-2.5 px-4 rounded-xl shadow-md border border-amber-300 flex items-center gap-2 transition-all hover:scale-105 active:scale-95"
             >
               <WhatsAppIcon className="w-4 h-4" />
               <span>Book Appointment (₹500)</span>
@@ -183,9 +183,9 @@ export default function Navbar({ activeTab, setActiveTab }) {
                             : 'bg-gray-50 text-gray-800 hover:bg-emerald-50'
                         }`}
                       >
-                        <div className="text-xs font-semibold">{tab.nameHi}</div>
-                        <div className={`text-[10px] ${isActive ? 'text-emerald-100' : 'text-gray-400'}`}>
-                          ({tab.nameEn})
+                        <div className="text-xs font-semibold">{tab.nameEn}</div>
+                        <div className={`text-[10px] ${isActive ? 'text-emerald-100' : 'text-gray-500'}`}>
+                          ({tab.nameHi})
                         </div>
                       </button>
                     )
@@ -197,7 +197,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
                     href={WHATSAPP_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-whatsapp w-full justify-center py-2.5 text-xs font-semibold"
+                    className="w-full justify-center py-2.5 text-xs font-bold bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 text-white rounded-xl shadow-md border border-amber-300 flex items-center gap-2"
                   >
                     <WhatsAppIcon className="w-4 h-4" />
                     Book Appointment Online (₹500)
@@ -210,6 +210,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
                     Call for Appointment: {PHONE_PRIMARY_DISPLAY}
                   </a>
                 </div>
+
 
               </div>
             </motion.div>

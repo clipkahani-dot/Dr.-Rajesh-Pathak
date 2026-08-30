@@ -52,65 +52,70 @@ export default function HeroSection() {
             </div>
 
 
-            {/* Main Headline (50:50 English-Hindi Balanced) */}
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.2] font-hindi tracking-tight">
-              विशेषज्ञ होम्योपैथिक परामर्श <span className="gradient-text">& Book Appointment Online</span>
-            </h1>
+            {/* Main Headline (Doctor Demand: Book Appointment Online on Top, Hindi in Brackets below, English Priority) */}
+            <div className="space-y-2 pt-1">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15] tracking-tight font-sans">
+                Book Appointment Online
+              </h1>
+              <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-emerald-800 font-hindi">
+                (विशेषज्ञ होम्योपैथी परामर्श)
+              </p>
+            </div>
 
             {/* Subtitle with Doctor's Transparent Message */}
-            <p className="text-xs sm:text-base lg:text-lg text-gray-600 leading-relaxed font-hindi max-w-2xl mx-auto lg:mx-0">
-              <strong className="text-gray-900">{DOCTOR_NAME} {DOCTOR_QUALIFICATION}</strong> और 10+ विशेषज्ञ डॉक्टरों की टीम से अस्थमा, डायबिटीज, आर्थराइटिस, सर्वाइकल, सोरायसिस, मानसिक रोग व पाइल्स सहित <strong>20+ बीमारियों</strong> के लिए <strong>ऑनलाइन अपॉइंटमेंट बुक करें</strong>।
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Consult with <strong className="text-gray-900">{DOCTOR_NAME} {DOCTOR_QUALIFICATION}</strong> & 10+ Expert Doctors team for Asthma, Diabetes, Arthritis, Cervical, Psoriasis, Cancer & <strong>20+ chronic conditions</strong> worldwide.
             </p>
 
-
             {/* Feature Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-gray-700 font-hindi max-w-xl mx-auto lg:mx-0 text-left">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-gray-700 max-w-xl mx-auto lg:mx-0 text-left">
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>20+ पुरानी बीमारियों हेतु अपॉइंटमेंट</span>
+                <span>Appointments for 20+ Chronic Diseases</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>2 घंटे की गहन केस-टेकिंग (Detailed Study)</span>
+                <span>2-Hour Detailed Case Study (Repertorization)</span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>मात्र <strong>{CONSULTATION_FEE}</strong> में परामर्श शुल्क</span>
+                <span>Consultation Fee: <strong>{CONSULTATION_FEE}</strong></span>
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>ऑनलाइन गाइडेंस एवं क्लिनिक विज़िट दोनों उपलब्ध</span>
+                <span>Online Guidance & Hospital Clinics Available</span>
               </div>
             </div>
 
             {/* Transparent Disclaimer Badge (As Requested by Doctor) */}
-            <div className="p-3 bg-emerald-50/80 rounded-2xl border border-emerald-200/90 text-[11px] sm:text-xs text-emerald-950 font-hindi flex items-start gap-2 max-w-xl mx-auto lg:mx-0 text-left shadow-sm">
-              <ShieldCheck className="w-4 h-4 text-emerald-700 flex-shrink-0 mt-0.5" />
+            <div className="p-3 bg-amber-50/90 rounded-2xl border border-amber-200 text-[11px] sm:text-xs text-amber-950 font-hindi flex items-start gap-2 max-w-xl mx-auto lg:mx-0 text-left shadow-sm">
+              <ShieldCheck className="w-4 h-4 text-amber-700 flex-shrink-0 mt-0.5" />
               <span>
                 <strong>पारदर्शी चिकित्सा नीति:</strong> Book appointment online & consult online in stable situation. गंभीर व आपातकालीन स्थिति में नजदीकी क्लिनिक/अस्पताल में चेकअप आवश्यक है।
               </span>
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons (Doctor Demand: Bright Red / Yellowish Red Tab) */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-whatsapp w-full sm:w-auto text-sm sm:text-base py-3.5 px-7 rounded-2xl shadow-xl hover:shadow-2xl flex items-center justify-center gap-2.5 font-hindi group"
+                className="w-full sm:w-auto text-base sm:text-lg py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 font-bold text-white bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-rose-500 border-2 border-amber-300 group transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
               >
-                <WhatsAppIcon className="w-5 h-5 sm:w-6 sm:h-6 group-hover:scale-110 transition" />
-                <span>Book Appointment Online (WhatsApp)</span>
+                <WhatsAppIcon className="w-6 h-6 group-hover:scale-110 transition flex-shrink-0" />
+                <span>Book Appointment Online</span>
               </a>
 
               <a
                 href={`tel:${PHONE_PRIMARY}`}
-                className="btn-secondary w-full sm:w-auto text-sm sm:text-base py-3.5 px-7 rounded-2xl flex items-center justify-center gap-2 font-hindi hover:bg-emerald-50"
+                className="btn-secondary w-full sm:w-auto text-sm sm:text-base py-4 px-7 rounded-2xl flex items-center justify-center gap-2 font-semibold hover:bg-emerald-50"
               >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-600" />
-                <span>Call for Appointment ({PHONE_PRIMARY_DISPLAY})</span>
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-700" />
+                <span>Call: {PHONE_PRIMARY_DISPLAY}</span>
               </a>
             </div>
+
 
 
             {/* Micro Trust Indicators */}
