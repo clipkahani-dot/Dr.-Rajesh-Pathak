@@ -2,7 +2,8 @@ export const doctors = [
   {
     id: 1,
     name: 'Dr. Rajesh Pathak',
-    qualification: 'M.D. (Hom.)',
+    qualification: 'M.D. (Homoeopathy)',
+
     role: 'Lead Consultant & Assistant Professor',
     roleHi: 'प्रमुख सलाहकार एवं सहायक प्रोफेसर',
     experience: '18+ Years',

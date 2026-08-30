@@ -145,8 +145,9 @@ export default function HomeDashboard({ setActiveTab }) {
               </span>
               
               <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                {DOCTOR_NAME} ({DOCTOR_QUALIFICATION})
+                {DOCTOR_NAME} {DOCTOR_QUALIFICATION}
               </h3>
+
               
               <p className="text-sm text-emerald-700 font-semibold">
                 Assistant Professor in Homoeopathy Medical College, Surat • Author | Lecturer | Researcher

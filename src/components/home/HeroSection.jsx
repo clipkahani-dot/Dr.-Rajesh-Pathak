@@ -58,8 +58,9 @@ export default function HeroSection() {
 
             {/* Subtitle with Doctor's Transparent Message */}
             <p className="text-xs sm:text-base lg:text-lg text-gray-600 leading-relaxed font-hindi max-w-2xl mx-auto lg:mx-0">
-              <strong className="text-gray-900">{DOCTOR_NAME} ({DOCTOR_QUALIFICATION})</strong> और 10+ विशेषज्ञ डॉक्टरों की टीम से अस्थमा, डायबिटीज, आर्थराइटिस, सर्वाइकल, सोरायसिस, मानसिक रोग व पाइल्स सहित <strong>20+ बीमारियों</strong> के लिए <strong>ऑनलाइन अपॉइंटमेंट बुक करें</strong>।
+              <strong className="text-gray-900">{DOCTOR_NAME} {DOCTOR_QUALIFICATION}</strong> और 10+ विशेषज्ञ डॉक्टरों की टीम से अस्थमा, डायबिटीज, आर्थराइटिस, सर्वाइकल, सोरायसिस, मानसिक रोग व पाइल्स सहित <strong>20+ बीमारियों</strong> के लिए <strong>ऑनलाइन अपॉइंटमेंट बुक करें</strong>।
             </p>
+
 
             {/* Feature Checklist */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-gray-700 font-hindi max-w-xl mx-auto lg:mx-0 text-left">

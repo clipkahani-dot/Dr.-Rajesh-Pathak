@@ -53,8 +53,9 @@ export default function AboutDoctor() {
             👨‍⚕️ डॉक्टर परिचय (Doctor Profile)
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            {DOCTOR_NAME} ({DOCTOR_QUALIFICATION})
+            {DOCTOR_NAME} {DOCTOR_QUALIFICATION}
           </h2>
+
           <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
             "मानवता की सेवा ही सबसे बड़ा धर्म है" — प्राकृतिक, सुरक्षित और वैज्ञानिक होम्योपैथिक उपचार
           </p>
