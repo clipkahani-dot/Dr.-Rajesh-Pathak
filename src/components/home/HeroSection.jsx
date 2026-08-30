@@ -35,21 +35,22 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Top Badges */}
+            {/* Top Badges (Doctor Requested: 18+ Experience & 10+ Doctor's Team first) */}
             <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-emerald-100 text-emerald-900 border border-emerald-200 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-600 flex-shrink-0" />
-                Book Appointment Online
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-emerald-100 text-emerald-950 border border-emerald-300 shadow-sm">
+                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-700 flex-shrink-0" />
+                18+ Years Experience & 10+ Doctor's Team
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-white text-gray-700 border border-gray-200 shadow-sm">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-white text-gray-800 border border-gray-200 shadow-sm">
                 <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-600 flex-shrink-0" />
-                18+ Yrs Exp • 10+ Doctors Team
+                Book Appointment Online
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-amber-50 text-amber-900 border border-amber-200">
                 <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 fill-amber-500 flex-shrink-0" />
                 {GOOGLE_RATING} Google Rating
               </span>
             </div>
+
 
             {/* Main Headline (50:50 English-Hindi Balanced) */}
             <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-[1.2] font-hindi tracking-tight">

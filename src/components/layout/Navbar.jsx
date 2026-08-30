@@ -106,8 +106,9 @@ export default function Navbar({ activeTab, setActiveTab }) {
                 <ShieldCheck className="w-4 h-4 text-emerald-600 inline flex-shrink-0" />
               </div>
               <p className="text-xs text-primary-800 font-bold tracking-wide mt-0.5">
-                {DOCTOR_QUALIFICATION} • 18+ Yrs Exp.
+                {DOCTOR_QUALIFICATION} • 18+ Yrs Exp. & 10+ Doctors Team
               </p>
+
             </div>
           </button>
 
