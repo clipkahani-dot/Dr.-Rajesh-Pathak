@@ -30,20 +30,19 @@ export default function Navbar({ activeTab, setActiveTab }) {
   }, [])
 
   const navTabs = [
-    { id: 'home', nameHi: 'होम', nameEn: 'Home' },
-    { id: 'about', nameHi: 'डॉक्टर परिचय', nameEn: 'About' },
-    { id: 'services', nameHi: 'उपचार', nameEn: 'Services' },
-    { id: 'process', nameHi: 'परामर्श प्रक्रिया', nameEn: 'Process' },
-    { id: 'team', nameHi: 'डॉक्टर टीम', nameEn: 'Team' },
-    { id: 'gallery', nameHi: 'फोटो गैलरी', nameEn: 'Gallery' },
-    { id: 'reviews', nameHi: 'समीक्षाएं', nameEn: 'Reviews' },
-    { id: 'contact', nameHi: 'संपर्क', nameEn: 'Contact' },
+    { id: 'home', nameEn: 'Home', nameHi: 'मुख्य पेज' },
+    { id: 'about', nameEn: "Doctor's Introduction", nameHi: 'डॉक्टर का परिचय' },
+    { id: 'services', nameEn: '20 Specializations', nameHi: '20 बीमारियां' },
+    { id: 'process', nameEn: 'Appointment Process', nameHi: 'परामर्श प्रक्रिया' },
+    { id: 'team', nameEn: 'Doctor Team', nameHi: 'विशेषज्ञ टीम' },
+    { id: 'gallery', nameEn: 'Certificates & Degrees', nameHi: 'डिग्री व प्रमाण' },
+    { id: 'reviews', nameEn: 'Patient Reviews', nameHi: 'मरीज समीक्षाएं' },
+    { id: 'contact', nameEn: 'Contact Us', nameHi: 'संपर्क व क्लिनिक' },
   ]
 
   const handleTabClick = (tabId) => {
     setActiveTab(tabId)
     setMobileMenuOpen(false)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (
@@ -114,7 +113,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
 
 
 
-          {/* Desktop Navigation Tabs (Exact layout from user screenshot) */}
+          {/* Desktop Navigation Tabs (Doctor Demand: English Top, Hindi in Brackets below) */}
           <div className="hidden xl:flex items-center gap-1 bg-gray-50/80 p-1.5 rounded-2xl border border-gray-100">
             {navTabs.map((tab) => {
               const isActive = activeTab === tab.id
@@ -122,15 +121,15 @@ export default function Navbar({ activeTab, setActiveTab }) {
                 <button
                   key={tab.id}
                   onClick={() => handleTabClick(tab.id)}
-                  className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 flex flex-col items-center leading-tight ${
+                  className={`px-3 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 flex flex-col items-center leading-tight ${
                     isActive
                       ? 'bg-emerald-700 text-white shadow-sm scale-105'
                       : 'text-gray-700 hover:text-emerald-800 hover:bg-emerald-50/70'
                   }`}
                 >
-                  <span className="font-hindi text-[13px]">{tab.nameHi}</span>
-                  <span className={`text-[10px] ${isActive ? 'text-emerald-100' : 'text-gray-400'}`}>
-                    ({tab.nameEn})
+                  <span className="font-bold text-[12px]">{tab.nameEn}</span>
+                  <span className={`text-[10px] font-hindi ${isActive ? 'text-emerald-100' : 'text-gray-400'}`}>
+                    ({tab.nameHi})
                   </span>
                 </button>
               )
