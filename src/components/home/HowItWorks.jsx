@@ -16,7 +16,7 @@ export default function HowItWorks() {
     {
       number: '01',
       badge: 'फ्री स्टेप (FREE)',
-      badgeColor: 'bg-emerald-100 text-emerald-800 border-emerald-200',
+      badgeColor: 'bg-emerald-100 text-emerald-950 border-2 border-emerald-400 font-bold',
       title: 'Book Appointment & Primary Info',
       desc: 'WhatsApp पर अपनी समस्या एवं लक्षणों की प्राथमिक जानकारी साझा करें। हमारी मेडिकल टीम आपसे सीधे संपर्क कर विवरण दर्ज करेगी।',
       icon: WhatsAppIcon,
@@ -27,24 +27,25 @@ export default function HowItWorks() {
     {
       number: '02',
       badge: 'सुरक्षित पेमेंट',
-      badgeColor: 'bg-blue-100 text-blue-800 border-blue-200',
+      badgeColor: 'bg-amber-100 text-amber-950 border-2 border-amber-400 font-bold',
       title: `Confirm Appointment (${CONSULTATION_FEE})`,
       desc: `परामर्श हेतु मात्र ${CONSULTATION_FEE} शुल्क का ऑनलाइन (UPI/GPay/PhonePe) भुगतान करें। इसके बाद विस्तृत केस-टेकिंग शुरू होगी।`,
       icon: CreditCard,
-      iconBg: 'bg-blue-600',
+      iconBg: 'bg-gradient-to-br from-amber-500 to-yellow-600',
       timing: 'Secure UPI / Gateway'
     },
     {
       number: '03',
       badge: 'विशेषज्ञ समाधान',
-      badgeColor: 'bg-purple-100 text-purple-800 border-purple-200',
+      badgeColor: 'bg-red-100 text-red-950 border-2 border-red-400 font-bold',
       title: 'Detailed Case Study & Guidance',
       desc: 'एक्सपर्ट डॉक्टर आपकी समस्या और रिपोर्ट्स का 2 घंटे गहन अध्ययन कर प्रमाणित होम्योपैथिक प्रिस्क्रिप्शन PDF व क्लिनिकल मार्गदर्शन प्रदान करेंगे।',
       icon: FileText,
-      iconBg: 'bg-purple-600',
+      iconBg: 'bg-gradient-to-br from-red-600 to-rose-700',
       timing: '2 घंटे की विस्तृत केस स्टडी'
     }
   ]
+
 
   return (
     <section id="process" className="py-20 lg:py-28 bg-white relative">

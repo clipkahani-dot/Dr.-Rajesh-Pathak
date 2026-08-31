@@ -35,24 +35,23 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
           >
-            {/* Top Badges (Doctor Requested: 18+ Experience & 10+ Doctor's Team first) */}
-            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-1.5 sm:gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-emerald-100 text-emerald-950 border border-emerald-300 shadow-sm">
-                <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-700 flex-shrink-0" />
+            {/* Top Badges (Bright Auspicious Colors: Saffron Gold, Royal Blue, Ruby Red Rating) */}
+            <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-amber-400 via-yellow-300 to-amber-400 text-amber-950 border-2 border-amber-500 shadow-md">
+                <Sparkles className="w-4 h-4 text-amber-900 flex-shrink-0" />
                 18+ Years Experience & 10+ Doctor's Team
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-white text-gray-800 border border-gray-200 shadow-sm">
-                <Users className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-primary-600 flex-shrink-0" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-gradient-to-r from-blue-600 to-cyan-600 text-white border-2 border-blue-300 shadow-md">
+                <Users className="w-4 h-4 text-white flex-shrink-0" />
                 Book Appointment Online
               </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-full text-[11px] sm:text-sm font-semibold bg-amber-50 text-amber-900 border border-amber-200">
-                <Star className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-amber-500 fill-amber-500 flex-shrink-0" />
+              <span className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full text-xs sm:text-sm font-bold bg-amber-50 text-amber-900 border-2 border-amber-300 shadow-sm">
+                <Star className="w-4 h-4 text-amber-500 fill-amber-500 flex-shrink-0" />
                 {GOOGLE_RATING} Google Rating
               </span>
             </div>
 
-
-            {/* Main Headline (Doctor Demand: Book Appointment Online on Top, Hindi in Brackets below, English Priority) */}
+            {/* Main Headline (English Priority + Hindi in Brackets) */}
             <div className="space-y-2 pt-1">
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15] tracking-tight font-sans">
                 Book Appointment Online
@@ -63,45 +62,45 @@ export default function HeroSection() {
             </div>
 
             {/* Subtitle with Doctor's Transparent Message */}
-            <p className="text-sm sm:text-base lg:text-lg text-gray-600 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Consult with <strong className="text-gray-900">{DOCTOR_NAME} {DOCTOR_QUALIFICATION}</strong> & 10+ Expert Doctors team for Asthma, Diabetes, Arthritis, Cervical, Psoriasis, Cancer & <strong>20+ chronic conditions</strong> worldwide.
+            <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+              Consult with <strong className="text-gray-950 font-bold">{DOCTOR_NAME} ({DOCTOR_QUALIFICATION})</strong> & 10+ Expert Doctors team for Asthma, Diabetes, Arthritis, Cervical, Psoriasis, Cancer & <strong>20+ chronic conditions</strong> worldwide.
             </p>
 
-            {/* Feature Checklist */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-gray-700 max-w-xl mx-auto lg:mx-0 text-left">
+            {/* Feature Checklist (Vibrant 4 Colors: Red, Gold, Blue, Green) */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-1 text-xs sm:text-sm text-gray-800 max-w-xl mx-auto lg:mx-0 text-left font-medium">
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="w-5 h-5 rounded-full bg-red-100 text-red-700 flex items-center justify-center font-bold text-xs flex-shrink-0">✓</span>
                 <span>Appointments for 20+ Chronic Diseases</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="w-5 h-5 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs flex-shrink-0">✓</span>
                 <span>2-Hour Detailed Case Study (Repertorization)</span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                <span>Consultation Fee: <strong>{CONSULTATION_FEE}</strong></span>
+                <span className="w-5 h-5 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs flex-shrink-0">✓</span>
+                <span>Consultation Fee: <strong className="text-blue-900">{CONSULTATION_FEE}</strong></span>
               </div>
               <div className="flex items-center gap-2">
-                <CheckCircle2 className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                <span className="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs flex-shrink-0">✓</span>
                 <span>Online Guidance & Hospital Clinics Available</span>
               </div>
             </div>
 
-            {/* Transparent Disclaimer Badge (As Requested by Doctor) */}
-            <div className="p-3 bg-amber-50/90 rounded-2xl border border-amber-200 text-[11px] sm:text-xs text-amber-950 font-hindi flex items-start gap-2 max-w-xl mx-auto lg:mx-0 text-left shadow-sm">
-              <ShieldCheck className="w-4 h-4 text-amber-700 flex-shrink-0 mt-0.5" />
+            {/* Transparent Disclaimer Badge (Warm Golden Amber) */}
+            <div className="p-3.5 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl border-2 border-amber-300 text-[11px] sm:text-xs text-amber-950 font-hindi flex items-start gap-2.5 max-w-xl mx-auto lg:mx-0 text-left shadow-sm">
+              <ShieldCheck className="w-5 h-5 text-amber-700 flex-shrink-0 mt-0.5" />
               <span>
                 <strong>पारदर्शी चिकित्सा नीति:</strong> Book appointment online & consult online in stable situation. गंभीर व आपातकालीन स्थिति में नजदीकी क्लिनिक/अस्पताल में चेकअप आवश्यक है।
               </span>
             </div>
 
-            {/* Action Buttons (Doctor Demand: Bright Red / Yellowish Red Tab) */}
+            {/* Action Buttons (Bright Red/Gold Flame & Royal Blue CTA) */}
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 pt-2">
               <a
                 href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto text-base sm:text-lg py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 font-bold text-white bg-gradient-to-r from-red-600 via-rose-600 to-amber-600 hover:from-red-500 hover:to-rose-500 border-2 border-amber-300 group transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
+                className="w-full sm:w-auto text-base sm:text-lg py-4 px-8 rounded-2xl shadow-xl hover:shadow-2xl flex items-center justify-center gap-3 font-extrabold text-white bg-gradient-to-r from-red-600 via-rose-600 to-amber-500 hover:from-red-500 hover:to-amber-400 border-2 border-yellow-300 group transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95 shadow-red-500/25"
               >
                 <WhatsAppIcon className="w-6 h-6 group-hover:scale-110 transition flex-shrink-0" />
                 <span>Book Appointment Online</span>
@@ -109,24 +108,24 @@ export default function HeroSection() {
 
               <a
                 href={`tel:${PHONE_PRIMARY}`}
-                className="btn-secondary w-full sm:w-auto text-sm sm:text-base py-4 px-7 rounded-2xl flex items-center justify-center gap-2 font-semibold hover:bg-emerald-50"
+                className="w-full sm:w-auto text-sm sm:text-base py-4 px-7 rounded-2xl flex items-center justify-center gap-2 font-bold text-blue-800 bg-blue-50/80 hover:bg-blue-100 border-2 border-blue-300 shadow-sm transition"
               >
-                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-emerald-700" />
+                <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-blue-700" />
                 <span>Call: {PHONE_PRIMARY_DISPLAY}</span>
               </a>
             </div>
 
-
-
             {/* Micro Trust Indicators */}
-            <div className="flex items-center justify-center lg:justify-start gap-6 pt-3 text-xs text-gray-500">
-              <span className="flex items-center gap-1">
-                <ShieldCheck className="w-4 h-4 text-emerald-600" /> 100% सुरक्षित एवं प्राकृतिक
+            <div className="flex items-center justify-center lg:justify-start gap-6 pt-3 text-xs text-gray-600 font-medium">
+              <span className="flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+                <ShieldCheck className="w-4 h-4 text-emerald-700" /> 100% सुरक्षित एवं प्राकृतिक
               </span>
-              <span className="flex items-center gap-1">
-                <Clock className="w-4 h-4 text-emerald-600" /> समय की 100% बचत
+              <span className="flex items-center gap-1.5">
+                <Clock className="w-4 h-4 text-blue-700" /> समय की 100% बचत
               </span>
             </div>
+
 
           </motion.div>
 

@@ -29,12 +29,13 @@ export default function Specializations() {
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-100 text-emerald-800 border border-emerald-200 mb-3">
             🩺 20+ विशेषज्ञताएं (Our 20 Key Specializations)
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            इन 20 गंभीर एवं पुरानी बीमारियों का सफल होम्योपैथिक उपचार
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 font-hindi">
+            हमारी मुख्य 20 विशेषज्ञताएं
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
-            बिना किसी हानिकारक साइड-इफेक्ट के जड़ से स्थायी व सुरक्षित समाधान (Safe & Natural Healing)
+          <p className="text-base sm:text-lg text-emerald-800 font-hindi font-bold mt-2">
+            इन 20 गंभीर एवं पुरानी बीमारियों का सुरक्षित व सफल होम्योपैथिक उपचार
           </p>
+
         </div>
 
         {/* Search & Category Filter Bar */}
@@ -92,24 +93,24 @@ export default function Specializations() {
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.9 }}
                   transition={{ duration: 0.25 }}
-                  className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col justify-between group"
+                  className={`bg-white rounded-3xl p-6 border-2 ${item.border} shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1`}
                 >
                   <div>
                     {/* Top Icon & Number */}
                     <div className="flex items-center justify-between mb-4">
-                      <div className={`w-12 h-12 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center group-hover:scale-110 transition shadow-inner`}>
+                      <div className={`w-12 h-12 rounded-2xl ${item.bg} ${item.color} flex items-center justify-center group-hover:scale-110 transition shadow-md border ${item.border}`}>
                         <Icon className="w-6 h-6" />
                       </div>
-                      <span className="text-xs font-bold text-gray-300 font-mono">
+                      <span className="text-xs font-extrabold text-gray-400 font-mono">
                         #{item.id < 10 ? `0${item.id}` : item.id}
                       </span>
                     </div>
                     
                     {/* Disease Names */}
-                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 font-hindi leading-snug">
+                    <h3 className="text-lg sm:text-xl font-extrabold text-gray-900 font-hindi leading-snug">
                       {item.nameHi}
                     </h3>
-                    <span className="text-xs font-semibold text-emerald-700 uppercase tracking-wide block mt-0.5">
+                    <span className="text-xs font-bold text-gray-600 uppercase tracking-wide block mt-0.5">
                       {item.name}
                     </span>
 
@@ -121,20 +122,21 @@ export default function Specializations() {
 
                   {/* Card Bottom CTA */}
                   <div className="pt-4 mt-4 border-t border-gray-100 flex items-center justify-between">
-                    <span className="text-[11px] font-semibold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-full">
+                    <span className={`text-[11px] font-bold ${item.tagColor} px-2.5 py-1 rounded-full shadow-sm`}>
                       व्यक्तिगत केस स्टडी
                     </span>
                     <a
                       href={`https://wa.me/919106947508?text=नमस्ते%20डॉ.%20राजेश%20पाठक%20सर,%20मुझे%20${encodeURIComponent(item.nameHi)}%20(${item.name})%20के%20लिए%20Book%20Appointment%20करना%20है।`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-1 group-hover:translate-x-1 transition font-hindi"
+                      className="text-xs font-extrabold text-red-600 hover:text-red-800 flex items-center gap-1 group-hover:translate-x-1 transition font-hindi"
                     >
                       Book Appointment <ArrowRight className="w-3.5 h-3.5" />
                     </a>
-
                   </div>
                 </motion.div>
+
+
               )
             })}
           </AnimatePresence>

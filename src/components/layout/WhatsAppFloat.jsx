@@ -38,8 +38,9 @@ export default function WhatsAppFloat() {
               </div>
               <div>
                 <p className="text-xs font-bold text-gray-900 leading-tight">
-                  {DOCTOR_NAME} की टीम
+                  Dr. Rajesh Pathak की टीम
                 </p>
+
                 <p className="text-[11px] text-gray-600 mt-0.5 leading-snug font-hindi">
                   नमस्ते! क्या आपको किसी बीमारी के लिए परामर्श चाहिए? WhatsApp पर बात करें ({CONSULTATION_FEE})
                 </p>

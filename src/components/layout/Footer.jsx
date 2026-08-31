@@ -66,18 +66,19 @@ export default function Footer({ setActiveTab }) {
           {/* Column 1: Doctor Profile & Motto */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <div className="h-10 w-24 rounded-xl overflow-hidden shadow-md border border-emerald-700 bg-emerald-950 flex-shrink-0">
+              <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg border-2 border-amber-400 bg-black flex-shrink-0 p-0.5">
                 <img 
-                  src="/images/banner/main-banner.jpg" 
-                  alt={`${DOCTOR_NAME} Logo`} 
-                  className="w-full h-full object-cover"
+                  src="/images/logo/main-logo.jpg" 
+                  alt={`${DOCTOR_NAME} Official Logo`} 
+                  className="w-full h-full object-contain rounded-full"
                 />
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white leading-snug">{DOCTOR_NAME}</h4>
-                <p className="text-xs text-emerald-400 font-medium">{DOCTOR_QUALIFICATION}</p>
+                <p className="text-xs text-amber-400 font-bold uppercase">{DOCTOR_QUALIFICATION}</p>
               </div>
             </div>
+
 
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-4 font-hindi">
               "मानवता की सेवा ही सबसे बड़ा धर्म है।" 18+ वर्षों से जटिल एवं पुरानी बीमारियों (Chronic Diseases) का सफल और सुरक्षित होम्योपैथिक उपचार।

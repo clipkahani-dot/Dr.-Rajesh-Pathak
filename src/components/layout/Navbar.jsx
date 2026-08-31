@@ -84,32 +84,32 @@ export default function Navbar({ activeTab, setActiveTab }) {
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           
-          {/* Logo & Doctor Title using Main Banner Image */}
+          {/* Round Official Logo & Doctor Title */}
           <button 
             onClick={() => handleTabClick('home')}
-            className="flex items-center gap-2.5 group text-left focus:outline-none py-0.5"
+            className="flex items-center gap-3 group text-left focus:outline-none py-0.5"
           >
-            <div className="h-10 sm:h-13 w-28 sm:w-40 rounded-xl sm:rounded-2xl overflow-hidden shadow-sm border-2 border-emerald-500/80 group-hover:scale-105 group-hover:border-emerald-600 transition-all duration-300 flex-shrink-0 bg-gray-900">
+            <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full overflow-hidden shadow-md border-2 border-amber-400 group-hover:scale-105 group-hover:border-amber-500 transition-all duration-300 flex-shrink-0 bg-black p-0.5">
               <img 
-                src="/images/banner/main-banner.jpg" 
-                alt={`${DOCTOR_NAME} Official Banner Logo`} 
-                className="w-full h-full object-cover object-center"
+                src="/images/logo/main-logo.jpg" 
+                alt={`${DOCTOR_NAME} Official Circular Logo`} 
+                className="w-full h-full object-contain rounded-full"
               />
             </div>
 
-            <div className="hidden md:block">
+            <div>
               <div className="flex items-center gap-1.5">
-                <span className="font-extrabold text-base lg:text-lg text-gray-900 leading-tight tracking-tight">
+                <span className="font-extrabold text-sm sm:text-base lg:text-lg text-gray-900 leading-tight tracking-tight">
                   {DOCTOR_NAME}
                 </span>
                 <ShieldCheck className="w-4 h-4 text-emerald-600 inline flex-shrink-0" />
               </div>
-              <p className="text-xs text-primary-800 font-bold tracking-wide mt-0.5">
+              <p className="text-[10px] sm:text-xs text-emerald-800 font-bold tracking-wide mt-0.5 uppercase">
                 {DOCTOR_QUALIFICATION} • 18+ Yrs Exp. & 10+ Doctors Team
               </p>
-
             </div>
           </button>
+
 
 
 

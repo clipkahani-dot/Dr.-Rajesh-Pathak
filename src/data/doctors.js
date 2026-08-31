@@ -1,8 +1,9 @@
 export const doctors = [
   {
     id: 1,
-    name: 'Dr. Rajesh Pathak',
-    qualification: 'M.D. (Homoeopathy)',
+    name: 'Dr. Rajesh Pathak MD',
+    qualification: 'Homoeopath',
+
 
     role: 'Lead Consultant & Assistant Professor',
     roleHi: 'प्रमुख सलाहकार एवं सहायक प्रोफेसर',
@@ -101,8 +102,9 @@ export const doctors = [
 export const hospitals = [
   {
     id: 1,
-    name: 'CD Pachchigar Homoeopathy Medical College & Hospital',
+    name: 'C D Pachchigar College of Homoeopathy Medicine and Hospital',
     address: 'Surat, Gujarat',
+
     type: 'Medical College',
   },
   {

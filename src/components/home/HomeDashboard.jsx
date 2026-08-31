@@ -70,8 +70,9 @@ export default function HomeDashboard({ setActiveTab }) {
               return (
                 <div
                   key={item.id}
-                  className="bg-gray-50/70 hover:bg-white rounded-2xl p-5 border border-gray-100 shadow-sm hover:shadow-md hover:border-emerald-200 transition duration-200 flex flex-col justify-between group cursor-pointer"
+                  className={`bg-white rounded-2xl p-5 border-2 ${item.border} shadow-sm hover:shadow-lg transition-all duration-200 flex flex-col justify-between group cursor-pointer hover:-translate-y-1`}
                   onClick={() => {
+
                     setActiveTab('services')
                     window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
@@ -144,18 +145,25 @@ export default function HomeDashboard({ setActiveTab }) {
                 <Award className="w-3.5 h-3.5" /> 18+ Years Classical Homeopathy Legacy
               </span>
               
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
-                {DOCTOR_NAME} {DOCTOR_QUALIFICATION}
-              </h3>
+              <div className="space-y-0.5">
+                <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight">
+                  {DOCTOR_NAME}
+                </h3>
+                <p className="text-base font-bold text-emerald-700 uppercase tracking-wide">
+                  {DOCTOR_QUALIFICATION}
+                </p>
+              </div>
+
 
               
               <p className="text-sm text-emerald-700 font-semibold">
                 Assistant Professor in Homoeopathy Medical College, Surat • Author | Lecturer | Researcher
               </p>
 
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-2xl">
-                "मानवता की सेवा ही सबसे बड़ा धर्म है।" डॉ. राजेश पाठक स्वयं प्रत्येक रोगी की 2 घंटे विस्तृत केस हिस्ट्री लेकर व्यक्तिगत दवा निर्धारित करते हैं।
+              <p className="text-xs sm:text-sm text-gray-700 leading-relaxed max-w-2xl font-hindi">
+                <strong>हमारा मिशन (Aphorism 01):</strong> "रोगी को पुनः स्वस्थ करना और रोगमुक्ति प्रदान करना ही एकमात्र लक्ष्य है।" देश के 65%–70% मध्यम व निम्न आय वर्ग तक निःशुल्क स्वास्थ्य शिविरों व सुलभ चिकित्सा का विस्तार।
               </p>
+
 
               <div className="pt-3 flex flex-wrap justify-center lg:justify-start gap-3">
                 <button

@@ -6,18 +6,25 @@ import {
   Heart, 
   ShieldCheck, 
   CheckCircle2, 
-  ExternalLink
+  ExternalLink,
+  Target,
+  Eye,
+  Compass,
+  Sparkles
 } from 'lucide-react'
 import WhatsAppIcon from '../ui/WhatsAppIcon'
-
 
 import { 
   DOCTOR_NAME, 
   DOCTOR_QUALIFICATION, 
   DOCTOR_DESIGNATION, 
   WHATSAPP_URL, 
-  MAPS_LINK 
+  MAPS_LINK,
+  DOCTOR_MISSION,
+  DOCTOR_VISION,
+  DOCTOR_TARGET
 } from '../../utils/constants'
+
 
 export default function AboutDoctor() {
   const highlights = [
@@ -52,9 +59,15 @@ export default function AboutDoctor() {
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-3">
             👨‍⚕️ डॉक्टर परिचय (Doctor Profile)
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            {DOCTOR_NAME} {DOCTOR_QUALIFICATION}
-          </h2>
+          <div className="space-y-1">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 tracking-tight">
+              {DOCTOR_NAME}
+            </h2>
+            <p className="text-xl sm:text-2xl font-bold text-emerald-700 tracking-wide uppercase">
+              {DOCTOR_QUALIFICATION}
+            </p>
+          </div>
+
 
           <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
             "मानवता की सेवा ही सबसे बड़ा धर्म है" — प्राकृतिक, सुरक्षित और वैज्ञानिक होम्योपैथिक उपचार
@@ -200,8 +213,98 @@ export default function AboutDoctor() {
           </div>
         </div>
 
+        {/* ── Mission, Vision & Target Section (Doctor Hahnemann's Organon of Medicine) ── */}
+        <div className="mt-16 space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-gradient-to-r from-amber-400 to-yellow-400 text-amber-950 border border-amber-500 shadow-sm">
+              <Sparkles className="w-4 h-4 text-amber-900" />
+              चिकित्सीय सिद्धांत एवं विज़न (Organon of Medicine)
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-hindi mt-2">
+              हमारा मिशन, विज़न एवं सामाजिक लक्ष्य
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-600 font-hindi mt-1">
+              डॉ. सैमुअल हैनिमैन के मौलिक होम्योपैथिक सिद्धांतों एवं 140+ करोड़ देशवासियों के स्वास्थ्य को समर्पित
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            {/* Mission Card (Aphorism 01) - Bright Saffron Amber */}
+            <div className="bg-gradient-to-br from-amber-50/90 via-white to-yellow-50 rounded-3xl p-6 sm:p-7 border-2 border-amber-300 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center font-extrabold shadow-md">
+                    <Target className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-bold text-amber-950 bg-amber-200/80 px-2.5 py-1 rounded-full border border-amber-300 font-mono">
+                    {DOCTOR_MISSION.aphorism}
+                  </span>
+                </div>
+                <h4 className="text-xl font-extrabold text-gray-900 mb-2 font-sans">
+                  {DOCTOR_MISSION.title}
+                </h4>
+                <p className="text-sm font-semibold text-amber-950 italic leading-relaxed mb-3">
+                  "{DOCTOR_MISSION.text}"
+                </p>
+              </div>
+              <p className="text-xs text-gray-700 font-hindi pt-3 border-t border-amber-200/80 font-medium">
+                {DOCTOR_MISSION.textHi}
+              </p>
+            </div>
+
+            {/* Vision Card (Aphorism 02) - Bright Royal Blue */}
+            <div className="bg-gradient-to-br from-blue-50/90 via-white to-cyan-50 rounded-3xl p-6 sm:p-7 border-2 border-blue-300 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-blue-600 text-white flex items-center justify-center font-extrabold shadow-md">
+                    <Eye className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-bold text-blue-950 bg-blue-200/80 px-2.5 py-1 rounded-full border border-blue-300 font-mono">
+                    {DOCTOR_VISION.aphorism}
+                  </span>
+                </div>
+                <h4 className="text-xl font-extrabold text-gray-900 mb-2 font-sans">
+                  {DOCTOR_VISION.title}
+                </h4>
+                <p className="text-sm font-semibold text-blue-950 italic leading-relaxed mb-3">
+                  "{DOCTOR_VISION.text}"
+                </p>
+              </div>
+              <p className="text-xs text-gray-700 font-hindi pt-3 border-t border-blue-200/80 font-medium">
+                {DOCTOR_VISION.textHi}
+              </p>
+            </div>
+
+            {/* Target Card (65%-70% of India) - Bright Crimson Red */}
+            <div className="bg-gradient-to-br from-rose-50/90 via-white to-red-50 rounded-3xl p-6 sm:p-7 border-2 border-rose-300 shadow-md hover:shadow-xl transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1">
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-red-600 to-rose-600 text-white flex items-center justify-center font-extrabold shadow-md">
+                    <Compass className="w-6 h-6" />
+                  </div>
+                  <span className="text-xs font-bold text-red-950 bg-red-200/80 px-2.5 py-1 rounded-full border border-red-300 font-mono">
+                    {DOCTOR_TARGET.aphorism}
+                  </span>
+                </div>
+                <h4 className="text-xl font-extrabold text-gray-900 mb-2 font-sans">
+                  {DOCTOR_TARGET.title}
+                </h4>
+                <p className="text-sm font-semibold text-red-950 leading-relaxed mb-3">
+                  "{DOCTOR_TARGET.text}"
+                </p>
+              </div>
+              <p className="text-xs text-gray-700 font-hindi pt-3 border-t border-rose-200/80 font-medium">
+                {DOCTOR_TARGET.textHi}
+              </p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   )
 }
+
 

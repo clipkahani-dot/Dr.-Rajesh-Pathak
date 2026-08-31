@@ -1,0 +1,21 @@
+{
+  "name": "Dr. Rajesh Pathak MD Homoeopath",
+  "short_name": "Dr. Rajesh Pathak",
+  "description": "Book Appointment Online. 18+ Years Experience & 10+ Doctors Team.",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/images/logo/main-logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/images/logo/main-logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#064e3b",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
