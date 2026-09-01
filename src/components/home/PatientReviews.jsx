@@ -40,24 +40,24 @@ export default function PatientReviews() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             
-            {/* Video Testimonial 1: IPD Patient Case */}
+            {/* Video Testimonial 1: OPD Patient Case */}
             <div className="bg-white rounded-3xl p-6 sm:p-7 border-2 border-emerald-200 shadow-xl flex flex-col justify-between">
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-emerald-950 rounded-full text-xs font-bold border border-emerald-300">
                     <Video className="w-3.5 h-3.5 text-emerald-700" />
-                    IPD Treatment Testimonial • Video 1
+                    OPD Treatment Testimonial • Video 1
                   </span>
                   <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
-                    ★ 5.0 Hospital Recovered
+                    ★ 5.0 OPD Recovered
                   </span>
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-hindi">
-                  IPD मरीज का वीडियो अनुभव (Patient Story 1)
+                  OPD मरीज का वीडियो अनुभव (Patient Story 1)
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 font-hindi leading-relaxed">
-                  देखें कि कैसे डॉ. राजेश पाठक के क्लासिकल होम्योपैथिक उपचार और सघन देखभाल से अस्पताल IPD में भर्ती मरीज को स्थायी स्वास्थ्य लाभ प्राप्त हुआ।
+                  ओपीडी (OPD) क्लिनिकल परामर्श के दौरान डॉ. राजेश पाठक MD के होम्योपैथिक उपचार एवं विस्तृत केस-टेकिंग से मरीज को मिले स्थायी स्वास्थ्य लाभ का वास्तविक अनुभव।
                 </p>
               </div>
 
@@ -79,7 +79,7 @@ export default function PatientReviews() {
                 <span className="flex items-center gap-1 text-emerald-800 font-bold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> 100% प्रमाणिक मरीज समीक्षा
                 </span>
-                <span className="font-semibold text-emerald-700">IPD क्लीनिकल रिकॉर्ड</span>
+                <span className="font-semibold text-emerald-700">OPD क्लीनिकल रिकॉर्ड</span>
               </div>
             </div>
 
@@ -92,15 +92,15 @@ export default function PatientReviews() {
                     IPD Hospital Testimonial • Video 2
                   </span>
                   <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
-                    ★ 5.0 Hospital Recovered
+                    ★ 5.0 Hospital Admitted (IPD)
                   </span>
                 </div>
 
                 <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-hindi">
-                  अस्पताल में भर्ती मरीज का वीडियो अनुभव (Patient Story 2)
+                  अस्पताल में भर्ती (IPD) मरीज का वीडियो अनुभव (Patient Story 2)
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-600 font-hindi leading-relaxed">
-                  अस्पताल IPD वार्ड में भर्ती मरीज का डॉ. राजेश पाठक MD के होम्योपैथिक उपचार एवं गहन क्लीनिकल देखभाल से स्वस्थ होने का वास्तविक अनुभव।
+                  अस्पताल IPD (इनडोर वार्ड) में भर्ती मरीज का डॉ. राजेश पाठक MD के होम्योपैथिक उपचार एवं गहन क्लीनिकल देखभाल से स्वस्थ होने का वास्तविक अनुभव।
                 </p>
               </div>
 
@@ -121,9 +121,10 @@ export default function PatientReviews() {
                 <span className="flex items-center gap-1 text-blue-800 font-bold">
                   <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" /> 100% प्रमाणिक मरीज समीक्षा
                 </span>
-                <span className="font-semibold text-blue-700">IPD क्लीनिकल रिकॉर्ड</span>
+                <span className="font-semibold text-blue-700">IPD इनडोर भर्ती रिकॉर्ड</span>
               </div>
             </div>
+
 
 
           </div>

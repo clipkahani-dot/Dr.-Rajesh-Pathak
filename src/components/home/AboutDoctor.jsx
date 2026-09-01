@@ -10,8 +10,10 @@ import {
   Target,
   Eye,
   Compass,
-  Sparkles
+  Sparkles,
+  MapPin
 } from 'lucide-react'
+
 import WhatsAppIcon from '../ui/WhatsAppIcon'
 
 import { 
@@ -30,8 +32,9 @@ export default function AboutDoctor() {
   const highlights = [
     {
       title: 'शैक्षणिक योग्यता एवं पद',
-      desc: 'Classical M.D. (Homoeopathy) & Assistant Professor in Homoeopathy Medical College, Surat',
+      desc: 'Classical M.D. (Homoeopath) & Assistant Professor in Homoeopathy Medical College, Surat',
       icon: GraduationCap
+
     },
     {
       title: '18+ वर्षों का अनुभव',
@@ -302,9 +305,95 @@ export default function AboutDoctor() {
           </div>
         </div>
 
+        {/* ── Hospital Showcase Section (अस्पताल देखें) ── */}
+        <div className="mt-16 bg-white rounded-3xl p-6 sm:p-10 border-2 border-emerald-200 shadow-xl">
+          <div className="text-center max-w-2xl mx-auto mb-8">
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-950 border border-emerald-300">
+              <Building2 className="w-4 h-4 text-emerald-700" />
+              अस्पताल एवं क्लीनिकल केंद्र (Hospital Infrastructure)
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 font-hindi mt-2">
+              मुख्य अस्पताल: वाइब्रेंट हॉस्पिटल (Vibrant Hospital)
+            </h3>
+            <p className="text-xs sm:text-sm text-gray-600 font-hindi mt-1">
+              4th Floor, Syska Plaza, Priyanka Chokdi, Bhestan, Surat, Gujarat
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            {/* Hospital Real Building Photo */}
+            <div className="lg:col-span-6 rounded-2xl overflow-hidden border-2 border-emerald-300 shadow-md bg-gray-900 aspect-video sm:aspect-[4/3] relative group">
+              <img 
+                src="/images/gallery/vibrant-hospital-building.jpg" 
+                alt="Vibrant Hospital Building - Syska Plaza Bhestan Surat" 
+                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+              />
+              <div className="absolute top-3 left-3 bg-red-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold shadow flex items-center gap-1.5">
+                <span>+</span> VIBRANT HOSPITAL (Syska Plaza)
+              </div>
+              <div className="absolute bottom-3 left-3 right-3 bg-gray-950/80 backdrop-blur-sm text-white p-2.5 rounded-xl text-xs flex items-center justify-between">
+                <span>📍 भेस्तान, सूरत (गुजरात)</span>
+                <span className="text-amber-400 font-bold">IPD & OPD Center</span>
+              </div>
+            </div>
+
+            {/* Hospital Details & Consultation Info */}
+            <div className="lg:col-span-6 space-y-4 font-hindi">
+              <div className="space-y-2">
+                <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                  🏥 आधुनिक चिकित्सा सुविधा
+                </span>
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug">
+                  इन-पेशेंट (IPD) एवं आउट-पेशेंट (OPD) होम्योपैथिक क्लिनिकल केयर
+                </h4>
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                  वाइब्रेंट हॉस्पिटल में डॉ. राजेश पाठक MD और उनकी 10+ विशेषज्ञ डॉक्टरों की टीम द्वारा गंभीर एवं पुरानी बीमारियों के मरीजों को गहन क्लिनिकल परीक्षण, 2-घंटे की विस्तृत केस-टेकिंग और आवश्यकतानुसार अस्पताल में भर्ती (IPD) सुविधा प्रदान की जाती है।
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <div className="bg-emerald-50/80 p-3 rounded-xl border border-emerald-100">
+                  <div className="text-xs font-bold text-emerald-950">⏰ क्लीनिक समय</div>
+                  <div className="text-xs text-emerald-800 mt-0.5 font-semibold">शाम 6:00 PM से रात 8:00 PM</div>
+                  <div className="text-[10px] text-gray-500">(अथवा पूर्व अपॉइंटमेंट द्वारा)</div>
+                </div>
+                <div className="bg-emerald-50/80 p-3 rounded-xl border border-emerald-100">
+                  <div className="text-xs font-bold text-emerald-950">🌐 ऑनलाइन परामर्श</div>
+                  <div className="text-xs text-emerald-800 mt-0.5 font-semibold">सुबह 9:00 AM – रात 9:00 PM</div>
+                  <div className="text-[10px] text-gray-500">(All India WhatsApp / Video)</div>
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-wrap gap-3">
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary text-xs py-2.5 px-5 shadow flex items-center gap-1.5"
+                >
+                  <MapPin className="w-3.5 h-3.5" />
+                  Google Maps पर अस्पताल देखें
+                </a>
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp text-xs py-2.5 px-5 shadow flex items-center gap-1.5"
+                >
+                  <WhatsAppIcon className="w-3.5 h-3.5" />
+                  हॉस्पिटल अपॉइंटमेंट बुक करें
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
   )
 }
+
 
 

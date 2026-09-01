@@ -85,7 +85,7 @@ export default function Footer({ setActiveTab }) {
             </p>
             <div className="space-y-1.5 text-xs text-gray-400">
               <div className="flex items-center gap-2 text-emerald-400">
-                <CheckCircle2 className="w-3.5 h-3.5" /> Classical MD Homeopathy
+                <CheckCircle2 className="w-3.5 h-3.5" /> Classical MD Homoeopath
               </div>
               <div className="flex items-center gap-2 text-emerald-400">
                 <CheckCircle2 className="w-3.5 h-3.5" /> Assistant Professor in Med. College
@@ -94,6 +94,8 @@ export default function Footer({ setActiveTab }) {
                 <CheckCircle2 className="w-3.5 h-3.5" /> 10+ Expert Doctors Team
               </div>
             </div>
+
+
           </div>
 
           {/* Column 2: Quick Links */}

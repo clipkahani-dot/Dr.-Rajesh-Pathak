@@ -101,6 +101,15 @@ export default function GallerySection() {
 
     // ── 2. Hospitals, Clinics & Team Activities ──
     {
+      src: '/images/gallery/vibrant-hospital-building.jpg',
+      title: 'Vibrant Hospital — Syska Plaza, Bhestan, Surat',
+      subtitle: 'मुख्य अस्पताल: 4th Floor, Syska Plaza, Priyanka Chokdi, Bhestan, Surat. आधुनिक इन-पेशेंट (IPD) एवं क्लिनिकल परामर्श केंद्र।',
+      tag: '🏥 मुख्य अस्पताल (Main Hospital)',
+      category: 'clinics',
+      location: 'Surat, Gujarat',
+      featured: true
+    },
+    {
       src: '/images/gallery/university-team-surat.jpg',
       title: 'Medical College Faculty & Student Doctors Team',
       subtitle: 'Veer Narmad South Gujarat University & CD Pachchigar College Medical Team',
@@ -109,6 +118,7 @@ export default function GallerySection() {
       location: 'Surat, Gujarat',
       featured: false
     },
+
     {
       src: '/images/gallery/aditya-hospital-pimpri.jpg',
       title: 'Aditya Homoeopathic Hospital & Healing Centre',

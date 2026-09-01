@@ -98,19 +98,12 @@ function App() {
 
             {/* 2. ABOUT TAB */}
             {activeTab === 'about' && (
-              <>
-                <AboutDoctor />
-                <ClinicTimings />
-                <GallerySection />
-              </>
+              <AboutDoctor />
             )}
 
             {/* 3. SERVICES TAB (All 20 Diseases with Filters) */}
             {activeTab === 'services' && (
-              <>
-                <Specializations />
-                <ContactSection />
-              </>
+              <Specializations />
             )}
 
             {/* 4. PROCESS TAB */}
@@ -118,33 +111,22 @@ function App() {
               <>
                 <HowItWorks />
                 <WhyChooseUs />
-                <ContactSection />
               </>
             )}
 
             {/* 5. TEAM TAB */}
             {activeTab === 'team' && (
-              <>
-                <DoctorTeam />
-                <AboutDoctor />
-              </>
+              <DoctorTeam />
             )}
 
             {/* 6. GALLERY TAB */}
             {activeTab === 'gallery' && (
-              <>
-                <GallerySection />
-                <WhyChooseUs />
-              </>
+              <GallerySection />
             )}
 
             {/* 7. REVIEWS TAB */}
             {activeTab === 'reviews' && (
-              <>
-                <PatientReviews />
-                <WhyChooseUs />
-                <FAQ />
-              </>
+              <PatientReviews />
             )}
 
             {/* 8. CONTACT TAB */}
@@ -152,9 +134,9 @@ function App() {
               <>
                 <ContactSection />
                 <ClinicTimings />
-                <FAQ />
               </>
             )}
+
 
             {/* 9. PRIVACY POLICY TAB */}
             {activeTab === 'privacy' && (
