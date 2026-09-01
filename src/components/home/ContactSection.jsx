@@ -49,15 +49,16 @@ export default function ContactSection() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-100 text-emerald-900 border border-emerald-200 mb-3">
-            📍 Book Appointment & Clinic Locations
+            📍 Book Online Appointment & Network Locations
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            अपॉइंटमेंट बुक करें एवं क्लिनिक लोकेशन
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 font-hindi leading-tight">
+            ऑनलाइन एप्पाइंटमेंट बुक करे व नजदीकी नेटवर्क हॉस्पिटल/क्लिनिक का लोकेशन प्राप्त करे
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
-            Book Appointment Online in Stable Condition or Visit Our Surat Hospital Clinics
+          <p className="text-xs sm:text-sm md:text-base text-emerald-800 font-bold mt-3">
+            Book Online Appointment & get the nearby Consulting location in our network hospitals /clinics
           </p>
         </div>
+
 
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
@@ -113,10 +114,14 @@ export default function ContactSection() {
                   <MapPin className="w-6 h-6" />
                 </div>
                 <h4 className="font-bold text-gray-900 text-base font-hindi">मुख्य अस्पताल</h4>
-                <p className="text-xs text-gray-600 mt-1 font-hindi leading-snug">
-                  {PRIMARY_ADDRESS}
+                <p className="text-xs font-bold text-emerald-800 mt-1 font-hindi">
+                  वाइब्रेंट हॉस्पिटल (Vibrant Hospital)
+                </p>
+                <p className="text-xs text-gray-600 mt-0.5 font-hindi leading-snug">
+                  4th Floor, Syska Plaza, Priyanka Chokdi, Bhestan, Surat, Gujarat
                 </p>
               </div>
+
 
             </div>
 

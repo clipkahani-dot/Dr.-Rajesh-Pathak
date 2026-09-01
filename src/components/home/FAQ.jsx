@@ -22,12 +22,13 @@ export default function FAQ() {
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-3">
             ❓ अक्सर पूछे जाने वाले प्रश्न (FAQs)
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            आपके मन में सवाल? यहाँ हैं जवाब
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 font-hindi leading-tight">
+            आपके मन में है कई सवाल ? यहाँ है उनके सही संतुष्ट जवाब
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
-            ऑनलाइन होम्योपैथिक परामर्श और दवाइयों से संबंधित सामान्य प्रश्न
+          <p className="text-base sm:text-lg text-emerald-800 font-bold mt-2 font-hindi">
+            ऑनलाइन होम्योपैथिक परामर्श और दवाइयों से संबंधित सभी आवश्यक जानकारी
           </p>
+
         </div>
 
         {/* Accordion List */}

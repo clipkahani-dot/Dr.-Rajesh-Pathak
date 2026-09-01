@@ -59,12 +59,13 @@ export default function WhyChooseUs() {
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-3">
             ⭐ हमें ही क्यों चुनें (Why Choose Us)
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            डॉ. राजेश पाठक एवं टीम पर क्यों भरोसा करें?
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 font-hindi">
+            डॉ. राजेश पाठक एवं उनकी टीम पर क्यों भरोसा करें?
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
+          <p className="text-base sm:text-lg text-emerald-800 font-bold mt-2 font-hindi">
             सटीक होम्योपैथिक निदान, व्यक्तिगत देखभाल और विश्वसनीय परिणाम
           </p>
+
         </div>
 
         {/* 6 Grid Cards */}

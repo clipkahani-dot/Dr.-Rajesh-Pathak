@@ -17,23 +17,25 @@ export default function HowItWorks() {
       number: '01',
       badge: 'फ्री स्टेप (FREE)',
       badgeColor: 'bg-emerald-100 text-emerald-950 border-2 border-emerald-400 font-bold',
-      title: 'Book Appointment & Primary Info',
+      title: 'Book Appointment & Take Primary Information Free of Cost',
       desc: 'WhatsApp पर अपनी समस्या एवं लक्षणों की प्राथमिक जानकारी साझा करें। हमारी मेडिकल टीम आपसे सीधे संपर्क कर विवरण दर्ज करेगी।',
       icon: WhatsAppIcon,
       iconBg: 'bg-[#25D366]',
       timing: 'Instant Response'
     },
 
+
     {
       number: '02',
-      badge: 'सुरक्षित पेमेंट',
+      badge: `सुरक्षित पेमेंट (${CONSULTATION_FEE})`,
       badgeColor: 'bg-amber-100 text-amber-950 border-2 border-amber-400 font-bold',
-      title: `Confirm Appointment (${CONSULTATION_FEE})`,
+      title: 'Confirm Online Appointment After Payment',
       desc: `परामर्श हेतु मात्र ${CONSULTATION_FEE} शुल्क का ऑनलाइन (UPI/GPay/PhonePe) भुगतान करें। इसके बाद विस्तृत केस-टेकिंग शुरू होगी।`,
       icon: CreditCard,
       iconBg: 'bg-gradient-to-br from-amber-500 to-yellow-600',
       timing: 'Secure UPI / Gateway'
     },
+
     {
       number: '03',
       badge: 'विशेषज्ञ समाधान',
@@ -57,8 +59,9 @@ export default function HowItWorks() {
             ✨ अपॉइंटमेंट प्रक्रिया (Appointment & Consultation Workflow)
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            3 आसान स्टेप्स में अपॉइंटमेंट बुक करें एवं परामर्श पाएं
+            तीन आसान स्टेप्स में अपॉइंटमेंट बुक करें एवं परामर्श पाएं
           </h2>
+
           <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
             आसान, सुविधाजनक, सुरक्षित और समय की 100% बचत
           </p>

@@ -15,7 +15,7 @@ export default function PatientReviews() {
             <span className="flex text-amber-500 text-base">
               {'★'.repeat(5)}
             </span>
-            <span>{GOOGLE_RATING} / 5.0 Google Rating (Surat, Gujarat)</span>
+            <span>{GOOGLE_RATING} / 5.0 Google Rating (16+ Verified Google Reviews)</span>
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 font-hindi">
@@ -29,118 +29,160 @@ export default function PatientReviews() {
           </p>
         </div>
 
-        {/* ── Top Row: Real Video Testimonial + Google QR Code Scanner ── */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-14">
-          
-          {/* Left: Authentic Patient Video Testimonial (6 cols) */}
-          <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-7 border-2 border-emerald-200 shadow-xl flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-emerald-950 rounded-full text-xs font-bold border border-emerald-300">
-                  <Video className="w-3.5 h-3.5 text-emerald-700" />
-                  Real Patient Video Testimonial
-                </span>
-                <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
-                  ★ 5.0 Verified Story
-                </span>
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-hindi">
-                मरीज का वीडियो अनुभव (Patient Story)
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600 font-hindi leading-relaxed">
-                देखें कि कैसे डॉ. राजेश पाठक के होम्योपैथिक इलाज और 2-घंटे की विस्तृत केस-टेकिंग से मरीज को स्थायी स्वास्थ्य लाभ प्राप्त हुआ।
-              </p>
-            </div>
-
-            {/* Video Player */}
-            <div className="mt-4 rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-black aspect-video relative group">
-              <video 
-                controls 
-                preload="metadata"
-                className="w-full h-full object-contain"
-                poster="/images/banner/poster-banner.jpg"
-              >
-                <source src="/videos/patient-testimonials.mp4" type="video/mp4" />
-                आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
-              </video>
-            </div>
-
-            <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-hindi">
-              <span className="flex items-center gap-1 text-emerald-800 font-bold">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> 100% प्रमाणिक मरीज समीक्षा
-              </span>
-              <span>क्लीनिकल रिकॉर्ड</span>
-            </div>
+        {/* ── Real Patient Video Testimonials (2 Videos Grid) ── */}
+        <div className="mb-14">
+          <div className="text-center mb-8">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-emerald-900 rounded-full text-xs font-bold border border-emerald-300 uppercase tracking-wider">
+              <Video className="w-3.5 h-3.5 text-emerald-700" />
+              Real Patient Video Testimonials (वास्तविक वीडियो अनुभव)
+            </span>
           </div>
 
-          {/* Right: Official Google Review QR Code Feature Banner (6 cols) */}
-          <div className="lg:col-span-6 bg-white rounded-3xl p-6 sm:p-7 border-2 border-amber-200 shadow-xl flex flex-col justify-between">
-            <div className="space-y-3">
-              <div className="flex items-center justify-between">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 text-amber-950 rounded-full text-xs font-bold border border-amber-300">
-                  <Sparkles className="w-3.5 h-3.5 text-amber-600" /> Google Verified Reviews
-                </span>
-                <span className="text-xs font-bold text-gray-500">Google Maps Surat</span>
-              </div>
-
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-hindi">
-                Google पर अपनी रेटिंग एवं फीडबैक दें
-              </h3>
-              <p className="text-xs sm:text-sm text-gray-600 font-hindi leading-relaxed">
-                अपने मोबाइल कैमरे या Google Lens से क्यूआर कोड को स्कैन करें और सीधे Google Maps पर अपनी रेटिंग व समीक्षा दर्ज करें।
-              </p>
-            </div>
-
-            {/* QR Image Box + Action */}
-            <div className="mt-4 flex flex-col sm:flex-row items-center gap-6 bg-gradient-to-r from-amber-50/70 to-yellow-50/70 p-4 rounded-2xl border border-amber-200">
-              <div className="w-36 sm:w-40 flex-shrink-0 bg-white p-2 rounded-xl border-2 border-dashed border-amber-400 text-center shadow-sm">
-                <img 
-                  src="/images/qr/google-review-qr-scanner.jpg" 
-                  alt="Scan to Rate Us on Google - Dr Rajesh Pathak MD"
-                  className="w-full h-auto object-contain rounded-lg"
-                />
-                <span className="inline-block mt-1 text-[10px] font-bold text-amber-950 font-hindi">
-                  📷 Scan with Lens
-                </span>
-              </div>
-
-              <div className="space-y-3 text-center sm:text-left flex-1 font-hindi">
-                <div className="flex items-center justify-center sm:justify-start gap-1 text-amber-500 font-bold text-sm">
-                  {'★'.repeat(5)} <span className="text-gray-900 text-xs ml-1 font-mono">({GOOGLE_RATING}★)</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            
+            {/* Video Testimonial 1: IPD Patient Case */}
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border-2 border-emerald-200 shadow-xl flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-emerald-100 text-emerald-950 rounded-full text-xs font-bold border border-emerald-300">
+                    <Video className="w-3.5 h-3.5 text-emerald-700" />
+                    IPD Treatment Testimonial • Video 1
+                  </span>
+                  <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
+                    ★ 5.0 Hospital Recovered
+                  </span>
                 </div>
-                <p className="text-xs text-gray-700 leading-snug">
-                  आपका फीडबैक अन्य जरूरतमंद मरीजों को सही विशेषज्ञ चुनने में मार्गदर्शन करता है।
+
+                <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-hindi">
+                  IPD मरीज का वीडियो अनुभव (Patient Story 1)
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 font-hindi leading-relaxed">
+                  देखें कि कैसे डॉ. राजेश पाठक के क्लासिकल होम्योपैथिक उपचार और सघन देखभाल से अस्पताल IPD में भर्ती मरीज को स्थायी स्वास्थ्य लाभ प्राप्त हुआ।
                 </p>
+              </div>
 
-                <div className="pt-1 flex flex-col gap-2">
-                  <a
-                    href={MAPS_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs font-bold shadow transition flex items-center justify-center gap-1.5"
-                  >
-                    <Star className="w-4 h-4 text-amber-300 fill-amber-300" />
-                    Google Maps पर रिव्यू लिखें <ExternalLink className="w-3.5 h-3.5" />
-                  </a>
-                  <a
-                    href={WHATSAPP_URL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-4 py-2 bg-white hover:bg-emerald-50 text-emerald-800 border border-emerald-300 rounded-xl text-xs font-bold transition flex items-center justify-center gap-1.5"
-                  >
-                    <WhatsAppIcon className="w-4 h-4" />
-                    WhatsApp पर अनुभव भेजें
-                  </a>
-                </div>
+              {/* Video Player 1 */}
+              <div className="mt-4 rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-black aspect-video relative group">
+                <video 
+                  controls 
+                  preload="metadata"
+                  className="w-full h-full object-contain"
+                  poster="/images/banner/poster-banner.jpg"
+                >
+                  <source src="/videos/patient-testimonials-1.mp4" type="video/mp4" />
+                  <source src="/videos/patient-testimonials.mp4" type="video/mp4" />
+                  आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
+                </video>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-hindi">
+                <span className="flex items-center gap-1 text-emerald-800 font-bold">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" /> 100% प्रमाणिक मरीज समीक्षा
+                </span>
+                <span className="font-semibold text-emerald-700">IPD क्लीनिकल रिकॉर्ड</span>
               </div>
             </div>
 
-            <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-500 font-hindi text-center sm:text-left">
-              ⭐ 100% पारदर्शी और निष्पक्ष मरीज समीक्षा प्रणाली
-            </div>
-          </div>
+            {/* Video Testimonial 2: Hospital IPD Care Recovery */}
+            <div className="bg-white rounded-3xl p-6 sm:p-7 border-2 border-blue-200 shadow-xl flex flex-col justify-between">
+              <div className="space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-blue-100 text-blue-950 rounded-full text-xs font-bold border border-blue-300">
+                    <Video className="w-3.5 h-3.5 text-blue-700" />
+                    IPD Hospital Testimonial • Video 2
+                  </span>
+                  <span className="text-xs font-bold text-amber-500 flex items-center gap-1">
+                    ★ 5.0 Hospital Recovered
+                  </span>
+                </div>
 
+                <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 font-hindi">
+                  अस्पताल में भर्ती मरीज का वीडियो अनुभव (Patient Story 2)
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 font-hindi leading-relaxed">
+                  अस्पताल IPD वार्ड में भर्ती मरीज का डॉ. राजेश पाठक MD के होम्योपैथिक उपचार एवं गहन क्लीनिकल देखभाल से स्वस्थ होने का वास्तविक अनुभव।
+                </p>
+              </div>
+
+              {/* Video Player 2 */}
+              <div className="mt-4 rounded-2xl overflow-hidden shadow-inner border border-gray-200 bg-black aspect-video relative group">
+                <video 
+                  controls 
+                  preload="metadata"
+                  className="w-full h-full object-contain"
+                  poster="/images/doctor/dr-rajesh-pathak-portrait.jpg"
+                >
+                  <source src="/videos/patient-testimonials-2.mp4" type="video/mp4" />
+                  आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
+                </video>
+              </div>
+
+              <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs text-gray-500 font-hindi">
+                <span className="flex items-center gap-1 text-blue-800 font-bold">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-600" /> 100% प्रमाणिक मरीज समीक्षा
+                </span>
+                <span className="font-semibold text-blue-700">IPD क्लीनिकल रिकॉर्ड</span>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+        {/* ── Official Google Review QR Code Feature Banner ── */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 border-2 border-amber-200 shadow-xl mb-14 max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8">
+            
+            {/* QR Image Box */}
+            <div className="w-44 sm:w-48 flex-shrink-0 bg-gradient-to-b from-amber-50 to-yellow-50 p-3 rounded-2xl border-2 border-dashed border-amber-300 text-center shadow-inner">
+              <img 
+                src="/images/qr/google-review-qr-scanner.jpg" 
+                alt="Scan to Rate Us on Google - Dr Rajesh Pathak MD"
+                className="w-full h-auto object-contain rounded-xl shadow"
+              />
+              <span className="inline-block mt-2 text-[11px] font-bold text-amber-950 font-hindi">
+                📷 Google Lens से स्कैन करें
+              </span>
+            </div>
+
+            {/* QR Info & Text */}
+            <div className="space-y-4 text-center md:text-left font-hindi">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-100 text-amber-900 rounded-full text-xs font-bold">
+                <Sparkles className="w-3.5 h-3.5 text-amber-600" /> Google Verified Reviews • {GOOGLE_RATING}★
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-snug">
+                क्या आप डॉ. पाठक से परामर्श ले चुके हैं? अपना अनुभव साझा करें
+              </h3>
+
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                अपने मोबाइल कैमरे या Google Lens से क्यूआर कोड को स्कैन करें और सीधे Google Maps पर अपनी रेटिंग व समीक्षा दर्ज करें। आपका फीडबैक अन्य मरीजों को सही डॉक्टर चुनने में मदद करता है।
+              </p>
+
+              <div className="pt-2 flex flex-wrap justify-center md:justify-start gap-3">
+                <a
+                  href={MAPS_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-5 py-2.5 bg-emerald-700 hover:bg-emerald-800 text-white rounded-xl text-xs sm:text-sm font-bold shadow transition inline-flex items-center gap-1.5"
+                >
+                  <Star className="w-4 h-4 text-amber-300 fill-amber-300" />
+                  Google Maps पर रेटिंग दें <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+
+                <a
+                  href={WHATSAPP_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-whatsapp text-xs sm:text-sm py-2.5 px-5 shadow inline-flex items-center gap-1.5"
+                >
+                  <WhatsAppIcon className="w-4 h-4" />
+                  WhatsApp पर फीडबैक भेजें
+                </a>
+              </div>
+            </div>
+
+          </div>
         </div>
 
         {/* ── Testimonials 6 Grid Cards with Vibrant Colors ── */}

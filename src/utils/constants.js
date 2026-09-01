@@ -85,11 +85,14 @@ export const CLINIC_TIMINGS = [
   }
 ]
 
-// ── Location ──
-export const PRIMARY_ADDRESS = 'Krishna villa row house, 81, opp. jiav, Bhestan, Surat, Gujarat 395023'
-export const GOOGLE_MAPS_ADDRESS = 'Krishna villa row house, 81, opp. jiav, Bhestan, Surat, Gujarat 395023'
+// ── Location & Hospital Addresses ──
+export const PRIMARY_HOSPITAL = 'Vibrant Hospital'
+export const PRIMARY_ADDRESS = 'Vibrant Hospital, 4th Floor, Syska Plaza, Priyanka Chokdi, Bhestan, Surat, Gujarat'
+export const RESIDENTIAL_ADDRESS = '81, Krishna Villa Row House, Opp. Jiav, Bhestan, Surat, Gujarat 395023'
+export const GOOGLE_MAPS_ADDRESS = 'Dr Rajesh Pathak MD Homoeopath, Vibrant Hospital / Bhestan, Surat, Gujarat'
 export const PLUS_CODE = '4R8M+49 Surat, Gujarat'
 export const LOCATION = 'Surat, Gujarat, India'
+
 
 // ── Google Maps ──
 export const MAPS_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3!2d72.83!3d21.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05153ae46e04f%3A0x43cf07a3c4e38a4d!2sDr%20Rajesh%20Pathak%20MD%20Homoeopath!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin'

@@ -34,8 +34,9 @@ function App() {
     process: { hi: 'ऑनलाइन परामर्श एवं प्रिस्क्रिप्शन प्रक्रिया', en: 'Consultation Process • 3 Simple Steps' },
     team: { hi: '10+ विशेषज्ञ डॉक्टरों की समर्पित टीम', en: 'Medical Team & Academic Faculty' },
     gallery: { hi: 'फोटो, प्रमाण पत्र एवं सम्मान गैलरी', en: 'Certificates & Clinical Gallery' },
-    reviews: { hi: 'मरीजों की संतुष्टि एवं 4.6★ समीक्षाएं', en: 'Patient Reviews & Experiences' },
+    reviews: { hi: 'मरीजों की संतुष्टि एवं 4.8★ Google समीक्षाएं', en: 'Patient Reviews & Experiences (4.8★)' },
     contact: { hi: 'सीधा संपर्क, क्लिनिक पता एवं अपॉइंटमेंट', en: 'Contact Us • Clinic Locations & Map' },
+
     privacy: { hi: 'गोपनीयता नीति एवं मरीज डेटा सुरक्षा', en: 'Privacy Policy & Terms of Service' },
   }
 

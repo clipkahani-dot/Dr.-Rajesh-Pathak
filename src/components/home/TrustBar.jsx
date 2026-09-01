@@ -1,4 +1,5 @@
 import { Award, Users, Clock, Star, ShieldCheck, HeartPulse } from 'lucide-react'
+import { GOOGLE_RATING } from '../../utils/constants'
 
 export default function TrustBar() {
   const stats = [
@@ -28,11 +29,12 @@ export default function TrustBar() {
     },
     {
       icon: Star,
-      value: '4.6 ★ Rating',
+      value: `${GOOGLE_RATING} ★ Rating`,
       label: 'Google Reviews',
       sub: 'Surat, Gujarat'
     }
   ]
+
 
   return (
     <section className="bg-primary-900 text-white py-8 border-y border-primary-800 relative z-20 shadow-lg">

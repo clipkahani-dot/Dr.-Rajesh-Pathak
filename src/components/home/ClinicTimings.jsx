@@ -9,15 +9,16 @@ export default function ClinicTimings() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-3">
-            🏥 अस्पताल एवं क्लीनिक समय (Hospital & Clinic Timings)
+            🏥 Consulting Time & Venue (Online / Offline)
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 font-hindi">
-            सूरत एवं ऑनलाइन परामर्श समय-सारणी
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 font-hindi">
+            चिकित्सा परामर्श का समय व स्थान (ऑनलाइन/ऑफलाइन)
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 mt-3 font-hindi">
-            ऑफलाइन क्लीनिक विजिट या ऑनलाइन वीडियो/व्हाट्सएप कंसल्टेशन
+          <p className="text-base sm:text-lg text-emerald-800 font-hindi font-bold mt-2">
+            ऑफलाइन क्लीनिक विजिट या पूरे भारत में ऑनलाइन वीडियो/व्हाट्सएप परामर्श
           </p>
         </div>
+
 
         {/* 4 Timings Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
