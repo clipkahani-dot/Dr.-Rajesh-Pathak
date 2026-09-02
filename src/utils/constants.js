@@ -20,8 +20,9 @@ export const DOCTOR_DESIGNATION = 'Author | Lecturer | Researcher | Experienced 
 export const DOCTOR_EXPERIENCE = '18+'
 export const TEAM_SIZE = '10+'
 export const PATIENTS_COUNT = '1000+'
-export const GOOGLE_RATING = '4.8'
-export const GOOGLE_REVIEWS_COUNT = '16'
+export const GOOGLE_RATING = '4.9'
+export const GOOGLE_REVIEWS_COUNT = '32'
+
 export const CONSULTATION_FEE = '₹500'
 
 
@@ -97,5 +98,12 @@ export const LOCATION = 'Surat, Gujarat, India'
 // ── Google Maps ──
 export const MAPS_EMBED_URL = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3720.3!2d72.83!3d21.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05153ae46e04f%3A0x43cf07a3c4e38a4d!2sDr%20Rajesh%20Pathak%20MD%20Homoeopath!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin'
 export const MAPS_LINK = 'https://www.google.com/maps/place/Dr+Rajesh+Pathak+MD+Homoeopath/@21.1152579,72.8334734,16z'
+
+// ── Official Social Media ──
+export const INSTAGRAM_URL = 'https://www.instagram.com/dr_rajesh_pathak/reels/'
+export const LINKEDIN_URL = 'https://www.linkedin.com/in/dr-rajesh-pathak-b5b713413'
+export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579937570030'
+
+
 
 

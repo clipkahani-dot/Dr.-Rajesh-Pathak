@@ -15,7 +15,8 @@ export default function PatientReviews() {
             <span className="flex text-amber-500 text-base">
               {'★'.repeat(5)}
             </span>
-            <span>{GOOGLE_RATING} / 5.0 Google Rating (16+ Verified Google Reviews)</span>
+            <span>{GOOGLE_RATING} / 5.0 Google Rating (32+ Verified Google Reviews)</span>
+
           </div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 font-hindi">

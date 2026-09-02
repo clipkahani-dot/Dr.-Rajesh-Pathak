@@ -5,7 +5,10 @@ import {
   Clock, 
   ShieldCheck, 
   CheckCircle2, 
-  ExternalLink 
+  ExternalLink,
+  Instagram,
+  Linkedin,
+  Facebook
 } from 'lucide-react'
 import WhatsAppIcon from '../ui/WhatsAppIcon'
 
@@ -19,8 +22,12 @@ import {
   EMAIL, 
   WHATSAPP_URL, 
   CLINIC_TIMINGS, 
-  MAPS_LINK 
+  MAPS_LINK,
+  INSTAGRAM_URL,
+  LINKEDIN_URL,
+  FACEBOOK_URL
 } from '../../utils/constants'
+
 
 export default function Footer({ setActiveTab }) {
   return (
@@ -63,7 +70,7 @@ export default function Footer({ setActiveTab }) {
         {/* 4 Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
           
-          {/* Column 1: Doctor Profile & Motto */}
+          {/* Column 1: Doctor Profile & Motto & Socials */}
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg border-2 border-amber-400 bg-black flex-shrink-0 p-0.5">
@@ -83,7 +90,7 @@ export default function Footer({ setActiveTab }) {
             <p className="text-xs sm:text-sm text-gray-400 leading-relaxed mb-4 font-hindi">
               "मानवता की सेवा ही सबसे बड़ा धर्म है।" 18+ वर्षों से जटिल एवं पुरानी बीमारियों (Chronic Diseases) का सफल और सुरक्षित होम्योपैथिक उपचार।
             </p>
-            <div className="space-y-1.5 text-xs text-gray-400">
+            <div className="space-y-1.5 text-xs text-gray-400 mb-4">
               <div className="flex items-center gap-2 text-emerald-400">
                 <CheckCircle2 className="w-3.5 h-3.5" /> Classical MD Homoeopath
               </div>
@@ -95,8 +102,48 @@ export default function Footer({ setActiveTab }) {
               </div>
             </div>
 
+            {/* Official Social Media Channels */}
+            <div className="pt-2 border-t border-gray-800/80">
+              <p className="text-[11px] text-gray-400 font-semibold uppercase tracking-wider mb-2">
+                Follow Official Channels:
+              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href={INSTAGRAM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-pink-600 via-purple-600 to-amber-500 hover:opacity-90 text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
+                  title="Follow Dr. Rajesh Pathak on Instagram Reels"
+                >
+                  <Instagram className="w-3.5 h-3.5" />
+                  Instagram
+                </a>
+                <a
+                  href={FACEBOOK_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#1877F2] hover:bg-[#166fe5] text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
+                  title="Follow Dr. Rajesh Pathak on Facebook"
+                >
+                  <Facebook className="w-3.5 h-3.5" />
+                  Facebook
+                </a>
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0077B5] hover:bg-[#006097] text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
+                  title="Connect with Dr. Rajesh Pathak on LinkedIn"
+                >
+                  <Linkedin className="w-3.5 h-3.5" />
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
 
           </div>
+
 
           {/* Column 2: Quick Links */}
           <div>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- 1. Main Homepage & Patient Portal -->
+  <url>
+    <loc>https://drrajeshpathak.com/</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://drrajeshpathak.com/images/logo/main-logo.jpg</image:loc>
+      <image:title>Dr. Rajesh Pathak MD Homoeopath Official Logo</image:title>
+      <image:caption>Best Homeopathy Doctor in Surat &amp; India</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drrajeshpathak.com/images/doctor/dr-rajesh-pathak-portrait.jpg</image:loc>
+      <image:title>Dr. Rajesh Pathak MD - Classical Homoeopath</image:title>
+      <image:caption>Assistant Professor &amp; Senior Homeopathic Consultant Surat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drrajeshpathak.com/images/gallery/vibrant-hospital-building.jpg</image:loc>
+      <image:title>Vibrant Hospital Syska Plaza Bhestan Surat</image:title>
+      <image:caption>Main Hospital for Classical Homeopathy in Surat</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
