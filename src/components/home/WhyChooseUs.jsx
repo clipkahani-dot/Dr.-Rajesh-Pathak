@@ -57,8 +57,9 @@ export default function WhyChooseUs() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-50 text-emerald-800 border border-emerald-200 mb-3">
-            ⭐ हमें ही क्यों चुनें (Why Choose Us)
+            ⭐ हमें ही क्यों चुनें ? (Why Choose Us ?)
           </span>
+
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 font-hindi">
             डॉ. राजेश पाठक एवं उनकी टीम पर क्यों भरोसा करें?
           </h2>
