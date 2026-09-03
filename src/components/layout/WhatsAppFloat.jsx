@@ -63,8 +63,11 @@ export default function WhatsAppFloat() {
         <img 
           src="/images/icons/whatsapp.webp" 
           alt="WhatsApp Chat" 
+          width="64"
+          height="64"
           className="w-full h-full object-contain drop-shadow-xl"
         />
+
         <span className="sr-only">WhatsApp Consultation</span>
       </motion.a>
     </div>

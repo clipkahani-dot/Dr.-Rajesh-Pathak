@@ -74,11 +74,19 @@ export default function Footer({ setActiveTab }) {
           <div>
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 rounded-full overflow-hidden shadow-lg border-2 border-amber-400 bg-black flex-shrink-0 p-0.5">
-                <img 
-                  src="/images/logo/main-logo.jpg" 
-                  alt={`${DOCTOR_NAME} Official Logo`} 
-                  className="w-full h-full object-contain rounded-full"
-                />
+                <picture>
+                  <source srcSet="/images/logo/main-logo.webp" type="image/webp" />
+                  <img 
+                    src="/images/logo/main-logo-optimized.jpg" 
+                    alt={`${DOCTOR_NAME} Official Logo`} 
+                    width="48"
+                    height="48"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-contain rounded-full"
+                  />
+                </picture>
+
               </div>
               <div>
                 <h4 className="text-lg font-bold text-white leading-snug">{DOCTOR_NAME}</h4>

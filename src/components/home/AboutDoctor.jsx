@@ -324,11 +324,19 @@ export default function AboutDoctor() {
             
             {/* Hospital Real Building Photo */}
             <div className="lg:col-span-6 rounded-2xl overflow-hidden border-2 border-emerald-300 shadow-md bg-gray-900 aspect-video sm:aspect-[4/3] relative group">
-              <img 
-                src="/images/gallery/vibrant-hospital-building.jpg" 
-                alt="Vibrant Hospital Building - Syska Plaza Bhestan Surat" 
-                className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
-              />
+              <picture>
+                <source srcSet="/images/gallery/vibrant-hospital-building.webp" type="image/webp" />
+                <img 
+                  src="/images/gallery/vibrant-hospital-building.jpg" 
+                  alt="Vibrant Hospital Building - Syska Plaza Bhestan Surat" 
+                  loading="lazy"
+                  decoding="async"
+                  width="800"
+                  height="600"
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+              </picture>
+
               <div className="absolute top-3 left-3 bg-red-600/90 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-bold shadow flex items-center gap-1.5">
                 <span>+</span> VIBRANT HOSPITAL (Syska Plaza)
               </div>

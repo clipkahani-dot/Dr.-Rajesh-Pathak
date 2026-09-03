@@ -92,12 +92,20 @@ export default function Navbar({ activeTab, setActiveTab }) {
             className="flex items-center gap-2.5 flex-shrink-0 min-w-max text-left focus:outline-none py-0.5 group"
           >
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full overflow-hidden shadow-md border-2 border-amber-400 group-hover:scale-105 group-hover:border-amber-500 transition-all duration-300 flex-shrink-0 bg-black p-0.5">
-              <img 
-                src="/images/logo/main-logo.jpg" 
-                alt={`${DOCTOR_NAME} Official Circular Logo`} 
-                className="w-full h-full object-contain rounded-full"
-              />
+              <picture>
+                <source srcSet="/images/logo/main-logo.webp" type="image/webp" />
+                <img 
+                  src="/images/logo/main-logo-optimized.jpg" 
+                  alt={`${DOCTOR_NAME} Official Circular Logo`} 
+                  width="48"
+                  height="48"
+                  loading="eager"
+                  decoding="async"
+                  className="w-full h-full object-contain rounded-full"
+                />
+              </picture>
             </div>
+
 
             <div className="flex flex-col whitespace-nowrap min-w-max">
               <div className="flex items-center gap-1">
