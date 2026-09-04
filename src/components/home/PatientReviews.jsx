@@ -68,7 +68,8 @@ export default function PatientReviews() {
                   controls 
                   preload="metadata"
                   className="w-full h-full object-contain"
-                  poster="/images/banner/poster-banner.jpg"
+                  poster="/images/banner/poster-banner.webp"
+                  aria-label="OPD मरीज का वीडियो अनुभव (Patient Story 1)"
                 >
                   <source src="/videos/patient-testimonials-1.mp4" type="video/mp4" />
                   <source src="/videos/patient-testimonials.mp4" type="video/mp4" />
@@ -111,8 +112,10 @@ export default function PatientReviews() {
                   controls 
                   preload="metadata"
                   className="w-full h-full object-contain"
-                  poster="/images/doctor/dr-rajesh-pathak-portrait.jpg"
+                  poster="/images/doctor/dr-rajesh-pathak-portrait.webp"
+                  aria-label="अस्पताल में भर्ती (IPD) मरीज का वीडियो अनुभव (Patient Story 2)"
                 >
+
                   <source src="/videos/patient-testimonials-2.mp4" type="video/mp4" />
                   आपका ब्राउज़र वीडियो सपोर्ट नहीं करता।
                 </video>

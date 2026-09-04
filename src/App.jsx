@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowLeft, Home, Sparkles } from 'lucide-react'
 
@@ -7,17 +7,20 @@ import Footer from './components/layout/Footer'
 import WhatsAppFloat from './components/layout/WhatsAppFloat'
 
 import HomeDashboard from './components/home/HomeDashboard'
-import AboutDoctor from './components/home/AboutDoctor'
-import Specializations from './components/home/Specializations'
-import HowItWorks from './components/home/HowItWorks'
-import DoctorTeam from './components/home/DoctorTeam'
-import ClinicTimings from './components/home/ClinicTimings'
-import GallerySection from './components/home/GallerySection'
-import WhyChooseUs from './components/home/WhyChooseUs'
-import PatientReviews from './components/home/PatientReviews'
-import FAQ from './components/home/FAQ'
-import ContactSection from './components/home/ContactSection'
-import PrivacyPolicy from './components/home/PrivacyPolicy'
+
+// Code-split other tabs on demand for instant mobile load speed
+const AboutDoctor = lazy(() => import('./components/home/AboutDoctor'))
+const Specializations = lazy(() => import('./components/home/Specializations'))
+const HowItWorks = lazy(() => import('./components/home/HowItWorks'))
+const DoctorTeam = lazy(() => import('./components/home/DoctorTeam'))
+const ClinicTimings = lazy(() => import('./components/home/ClinicTimings'))
+const GallerySection = lazy(() => import('./components/home/GallerySection'))
+const WhyChooseUs = lazy(() => import('./components/home/WhyChooseUs'))
+const PatientReviews = lazy(() => import('./components/home/PatientReviews'))
+const FAQ = lazy(() => import('./components/home/FAQ'))
+const ContactSection = lazy(() => import('./components/home/ContactSection'))
+const PrivacyPolicy = lazy(() => import('./components/home/PrivacyPolicy'))
+
 
 function App() {
   const [activeTab, setActiveTab] = useState('home')
@@ -84,68 +87,69 @@ function App() {
         )}
 
         {/* View Switcher with Smooth Animation */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={activeTab}
-            initial={{ opacity: 0, y: 15 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.25 }}
-          >
-            {/* 1. HOME TAB (The Main Patient Panel) */}
-            {activeTab === 'home' && (
-              <HomeDashboard setActiveTab={setActiveTab} />
-            )}
+        <Suspense fallback={<div className="min-h-[300px] flex items-center justify-center text-emerald-700 font-hindi text-sm">लोड हो रहा है...</div>}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeTab}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.25 }}
+            >
+              {/* 1. HOME TAB (The Main Patient Panel) */}
+              {activeTab === 'home' && (
+                <HomeDashboard setActiveTab={setActiveTab} />
+              )}
 
-            {/* 2. ABOUT TAB */}
-            {activeTab === 'about' && (
-              <AboutDoctor />
-            )}
+              {/* 2. ABOUT TAB */}
+              {activeTab === 'about' && (
+                <AboutDoctor />
+              )}
 
-            {/* 3. SERVICES TAB (All 20 Diseases with Filters) */}
-            {activeTab === 'services' && (
-              <Specializations />
-            )}
+              {/* 3. SERVICES TAB (All 20 Diseases with Filters) */}
+              {activeTab === 'services' && (
+                <Specializations />
+              )}
 
-            {/* 4. PROCESS TAB */}
-            {activeTab === 'process' && (
-              <>
-                <HowItWorks />
-                <WhyChooseUs />
-              </>
-            )}
+              {/* 4. PROCESS TAB */}
+              {activeTab === 'process' && (
+                <>
+                  <HowItWorks />
+                  <WhyChooseUs />
+                </>
+              )}
 
-            {/* 5. TEAM TAB */}
-            {activeTab === 'team' && (
-              <DoctorTeam />
-            )}
+              {/* 5. TEAM TAB */}
+              {activeTab === 'team' && (
+                <DoctorTeam />
+              )}
 
-            {/* 6. GALLERY TAB */}
-            {activeTab === 'gallery' && (
-              <GallerySection />
-            )}
+              {/* 6. GALLERY TAB */}
+              {activeTab === 'gallery' && (
+                <GallerySection />
+              )}
 
-            {/* 7. REVIEWS TAB */}
-            {activeTab === 'reviews' && (
-              <PatientReviews />
-            )}
+              {/* 7. REVIEWS TAB */}
+              {activeTab === 'reviews' && (
+                <PatientReviews />
+              )}
 
-            {/* 8. CONTACT TAB */}
-            {activeTab === 'contact' && (
-              <>
-                <ContactSection />
-                <ClinicTimings />
-              </>
-            )}
+              {/* 8. CONTACT TAB */}
+              {activeTab === 'contact' && (
+                <>
+                  <ContactSection />
+                  <ClinicTimings />
+                </>
+              )}
 
+              {/* 9. PRIVACY POLICY TAB */}
+              {activeTab === 'privacy' && (
+                <PrivacyPolicy setActiveTab={setActiveTab} />
+              )}
+            </motion.div>
+          </AnimatePresence>
+        </Suspense>
 
-            {/* 9. PRIVACY POLICY TAB */}
-            {activeTab === 'privacy' && (
-              <PrivacyPolicy setActiveTab={setActiveTab} />
-            )}
-          </motion.div>
-
-        </AnimatePresence>
 
       </main>
 

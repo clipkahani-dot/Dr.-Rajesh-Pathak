@@ -55,16 +55,16 @@
 
     <!-- ── 6. Critical LCP Image Preload & Favicon ── -->
     <link rel="preload" as="image" href="/images/doctor/dr-rajesh-pathak-portrait.webp" type="image/webp" fetchpriority="high" />
-    <link rel="icon" type="image/jpeg" href="/images/logo/main-logo.jpg" />
-
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <!-- ── 6. Favicon & Web Manifest (Google Search Compliant) ── -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#064e3b" />
     <meta name="msapplication-TileColor" content="#064e3b" />
-    <meta name="msapplication-TileImage" content="/images/logo/main-logo.jpg" />
+    <meta name="msapplication-TileImage" content="/android-chrome-192x192.png" />
+
 
     <!-- ── 7. Google Structured Data (JSON-LD Schema for Rich Google Knowledge Graph & Local SEO) ── -->
     <script type="application/ld+json">
@@ -126,8 +126,10 @@
             "https://www.instagram.com/dr_rajesh_pathak/reels/",
             "https://www.facebook.com/profile.php?id=61579937570030",
             "https://www.linkedin.com/in/dr-rajesh-pathak-b5b713413",
+            "https://youtube.com/@drrajeshpathak?si=oXYpcUMuPtvsRwUk",
             "https://www.google.com/maps/place/Dr+Rajesh+Pathak+MD+Homoeopath/@21.1152579,72.8334734,16z"
           ],
+
           "availableService": [
             {
               "@type": "MedicalTherapy",

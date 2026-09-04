@@ -15,13 +15,18 @@ import {
   Compass
 } from 'lucide-react'
 
+import { lazy, Suspense } from 'react'
+
 import HeroSection from './HeroSection'
 import TrustBar from './TrustBar'
 import HowItWorks from './HowItWorks'
-import ClinicTimings from './ClinicTimings'
-import ContactSection from './ContactSection'
+
+const ClinicTimings = lazy(() => import('./ClinicTimings'))
+const ContactSection = lazy(() => import('./ContactSection'))
+
 import { services } from '../../data/services'
 import { testimonials } from '../../data/testimonials'
+
 import { 
   DOCTOR_NAME, 
   DOCTOR_QUALIFICATION, 
@@ -235,12 +240,20 @@ export default function HomeDashboard({ setActiveTab }) {
             
             <div className="lg:col-span-4 flex justify-center">
               <div className="w-48 h-48 sm:w-56 sm:h-56 rounded-3xl overflow-hidden shadow-md border-4 border-emerald-100">
-                <img 
-                  src="/images/doctor/dr-rajesh-pathak-portrait.jpg" 
-                  alt={DOCTOR_NAME}
-                  className="w-full h-full object-cover object-top"
-                />
+                <picture>
+                  <source srcSet="/images/doctor/dr-rajesh-pathak-portrait.webp" type="image/webp" />
+                  <img 
+                    src="/images/doctor/dr-rajesh-pathak-portrait.jpg" 
+                    alt={DOCTOR_NAME}
+                    width="224"
+                    height="224"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </picture>
               </div>
+
             </div>
 
             <div className="lg:col-span-8 space-y-3 text-center lg:text-left font-hindi">
@@ -300,7 +313,9 @@ export default function HomeDashboard({ setActiveTab }) {
       </section>
 
       {/* 7. Hospital & Clinic Timings */}
-      <ClinicTimings />
+      <Suspense fallback={<div className="min-h-[150px]" />}>
+        <ClinicTimings />
+      </Suspense>
 
       {/* 8. Patient Reviews Quick Snippet */}
       <section className="py-16 bg-white border-b border-gray-100 font-hindi">
@@ -350,8 +365,11 @@ export default function HomeDashboard({ setActiveTab }) {
       </section>
 
       {/* 9. Contact & Maps Section */}
-      <ContactSection />
+      <Suspense fallback={<div className="min-h-[200px]" />}>
+        <ContactSection />
+      </Suspense>
 
     </div>
   )
 }
+

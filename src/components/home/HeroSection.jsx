@@ -162,7 +162,8 @@ export default function HeroSection() {
                   <div className="inline-block px-3 py-1 bg-emerald-600 text-white rounded-full text-xs font-bold mb-1 shadow">
                     Lead Consultant & Professor
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-bold">{DOCTOR_NAME}</h3>
+                  <h2 className="text-xl sm:text-2xl font-bold">{DOCTOR_NAME}</h2>
+
                   <p className="text-xs text-emerald-300 font-medium">{DOCTOR_QUALIFICATION}</p>
                   <p className="text-[11px] text-gray-300 mt-1 font-hindi">
                     Assistant Professor in Homoeopathy Medical College, Surat

@@ -181,10 +181,12 @@ export default function ContactSection() {
 
               <form onSubmit={handleSubmit} className="space-y-4 font-hindi">
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                  <label htmlFor="patient_name" className="block text-xs font-bold text-gray-700 mb-1">
                     आपका नाम (Your Full Name) *
                   </label>
                   <input
+                    id="patient_name"
+                    name="name"
                     type="text"
                     required
                     value={formData.name}
@@ -195,10 +197,12 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                  <label htmlFor="patient_phone" className="block text-xs font-bold text-gray-700 mb-1">
                     मोबाइल नंबर (Mobile / WhatsApp No.) *
                   </label>
                   <input
+                    id="patient_phone"
+                    name="phone"
                     type="tel"
                     required
                     value={formData.phone}
@@ -209,10 +213,12 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                  <label htmlFor="patient_disease" className="block text-xs font-bold text-gray-700 mb-1">
                     रोग या समस्या का चयन करें (Condition / Disease)
                   </label>
                   <select
+                    id="patient_disease"
+                    name="disease"
                     value={formData.disease}
                     onChange={(e) => setFormData({ ...formData, disease: e.target.value })}
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition bg-white"
@@ -228,10 +234,12 @@ export default function ContactSection() {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">
+                  <label htmlFor="patient_message" className="block text-xs font-bold text-gray-700 mb-1">
                     लक्षण या संक्षिप्त विवरण (Symptoms / Note)
                   </label>
                   <textarea
+                    id="patient_message"
+                    name="message"
                     rows={3}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -239,6 +247,7 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition resize-none"
                   />
                 </div>
+
 
                 <button
                   type="submit"

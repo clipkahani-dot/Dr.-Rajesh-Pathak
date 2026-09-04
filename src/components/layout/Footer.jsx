@@ -8,7 +8,8 @@ import {
   ExternalLink,
   Instagram,
   Linkedin,
-  Facebook
+  Facebook,
+  Youtube
 } from 'lucide-react'
 import WhatsAppIcon from '../ui/WhatsAppIcon'
 
@@ -25,8 +26,10 @@ import {
   MAPS_LINK,
   INSTAGRAM_URL,
   LINKEDIN_URL,
-  FACEBOOK_URL
+  FACEBOOK_URL,
+  YOUTUBE_URL
 } from '../../utils/constants'
+
 
 
 export default function Footer({ setActiveTab }) {
@@ -122,6 +125,7 @@ export default function Footer({ setActiveTab }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-gradient-to-r from-pink-600 via-purple-600 to-amber-500 hover:opacity-90 text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
                   title="Follow Dr. Rajesh Pathak on Instagram Reels"
+                  aria-label="Dr. Rajesh Pathak Instagram Reels"
                 >
                   <Instagram className="w-3.5 h-3.5" />
                   Instagram
@@ -132,9 +136,21 @@ export default function Footer({ setActiveTab }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#1877F2] hover:bg-[#166fe5] text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
                   title="Follow Dr. Rajesh Pathak on Facebook"
+                  aria-label="Dr. Rajesh Pathak Facebook Page"
                 >
                   <Facebook className="w-3.5 h-3.5" />
                   Facebook
+                </a>
+                <a
+                  href={YOUTUBE_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#FF0000] hover:bg-[#CC0000] text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
+                  title="Subscribe to Dr. Rajesh Pathak on YouTube"
+                  aria-label="Dr. Rajesh Pathak YouTube Channel"
+                >
+                  <Youtube className="w-3.5 h-3.5" />
+                  YouTube
                 </a>
                 <a
                   href={LINKEDIN_URL}
@@ -142,11 +158,13 @@ export default function Footer({ setActiveTab }) {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#0077B5] hover:bg-[#006097] text-white rounded-xl text-xs font-bold shadow transition hover:scale-105"
                   title="Connect with Dr. Rajesh Pathak on LinkedIn"
+                  aria-label="Dr. Rajesh Pathak LinkedIn Profile"
                 >
                   <Linkedin className="w-3.5 h-3.5" />
                   LinkedIn
                 </a>
               </div>
+
             </div>
 
 

@@ -103,6 +103,8 @@ export const MAPS_LINK = 'https://www.google.com/maps/place/Dr+Rajesh+Pathak+MD+
 export const INSTAGRAM_URL = 'https://www.instagram.com/dr_rajesh_pathak/reels/'
 export const LINKEDIN_URL = 'https://www.linkedin.com/in/dr-rajesh-pathak-b5b713413'
 export const FACEBOOK_URL = 'https://www.facebook.com/profile.php?id=61579937570030'
+export const YOUTUBE_URL = 'https://youtube.com/@drrajeshpathak?si=oXYpcUMuPtvsRwUk'
+
 
 
 
