@@ -29,13 +29,21 @@ async function optimize() {
   // 2. Doctor Portrait (Hero LCP Image)
   const docIn = path.join(publicDir, 'doctor/dr-rajesh-pathak-portrait.jpg')
   const docWebp = path.join(publicDir, 'doctor/dr-rajesh-pathak-portrait.webp')
+  const docMobileWebp = path.join(publicDir, 'doctor/dr-rajesh-pathak-portrait-mobile.webp')
   if (fs.existsSync(docIn)) {
     await sharp(docIn)
       .resize(600, null, { withoutEnlargement: true })
       .webp({ quality: 85 })
       .toFile(docWebp)
     console.log('Created:', docWebp, fs.statSync(docWebp).size, 'bytes')
+
+    await sharp(docIn)
+      .resize(360, null, { withoutEnlargement: true })
+      .webp({ quality: 80 })
+      .toFile(docMobileWebp)
+    console.log('Created:', docMobileWebp, fs.statSync(docMobileWebp).size, 'bytes')
   }
+
 
   // 3. Poster Banner
   const bannerIn = path.join(publicDir, 'banner/poster-banner.jpg')

@@ -142,18 +142,19 @@ export default function HeroSection() {
               {/* Doctor Real Image */}
               <div className="relative rounded-2xl overflow-hidden bg-gradient-to-b from-emerald-100 to-emerald-50 aspect-[4/5] sm:aspect-[3/4]">
                 <picture>
+                  <source media="(max-width: 640px)" srcSet="/images/doctor/dr-rajesh-pathak-portrait-mobile.webp" type="image/webp" />
                   <source srcSet="/images/doctor/dr-rajesh-pathak-portrait.webp" type="image/webp" />
                   <img 
                     src="/images/doctor/dr-rajesh-pathak-portrait.jpg" 
                     alt={`${DOCTOR_NAME} - ${DOCTOR_QUALIFICATION}`}
                     width="400"
                     height="500"
-                    fetchPriority="high"
                     loading="eager"
                     decoding="async"
                     className="w-full h-full object-cover object-top"
                   />
                 </picture>
+
 
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-950/80 via-transparent to-transparent" />
                 
