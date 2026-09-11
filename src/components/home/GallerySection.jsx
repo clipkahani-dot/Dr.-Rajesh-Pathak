@@ -63,6 +63,16 @@ export default function GallerySection() {
       featured: false
     },
     {
+      src: '/images/certificates/tb-mukt-bharat-certificate.webp',
+      title: 'Ministry of Youth Affairs & Sports (Govt. of India)',
+      subtitle: 'National Certificate of Participation — Viksit Bharat Young Leaders Dialogue (VBYLD) & Health Awareness (MYBharat)',
+      tag: '🇮🇳 MYBharat / Govt. of India',
+      category: 'certificates',
+      location: 'New Delhi / National',
+      featured: true
+    },
+
+    {
       src: '/images/certificates/world-homeopathy-day-honor.jpg',
       title: 'World Homeopathy Day National Recognition',
       subtitle: 'Special felicitation for holistic healthcare & gentlest cure philosophy in classical Homeopathy',
