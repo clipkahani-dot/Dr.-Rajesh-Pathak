@@ -64,13 +64,23 @@ export default function GallerySection() {
     },
     {
       src: '/images/certificates/tb-mukt-bharat-certificate.webp',
-      title: 'Ministry of Youth Affairs & Sports (Govt. of India)',
-      subtitle: 'National Certificate of Participation — Viksit Bharat Young Leaders Dialogue (VBYLD) & Health Awareness (MYBharat)',
-      tag: '🇮🇳 MYBharat / Govt. of India',
+      title: 'TB Mukt Bharat Abhiyan — Govt. of India',
+      subtitle: 'Ministry of Youth Affairs & Sports (MYBharat) — National Certificate of Participation for TB Mukt Bharat Abhiyan',
+      tag: '🇮🇳 TB Mukt Bharat',
       category: 'certificates',
       location: 'New Delhi / National',
       featured: true
     },
+    {
+      src: '/images/certificates/viksit-bharat-certificate.webp',
+      title: 'Viksit Bharat Young Leaders Dialogue 2027',
+      subtitle: 'Ministry of Youth Affairs & Sports (Govt. of India / MYBharat) — Certificate of Participation (10 September 2026)',
+      tag: '🇮🇳 Viksit Bharat 2027',
+      category: 'certificates',
+      location: 'New Delhi / National',
+      featured: true
+    },
+
 
     {
       src: '/images/certificates/world-homeopathy-day-honor.jpg',

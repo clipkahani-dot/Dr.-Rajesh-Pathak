@@ -75,14 +75,31 @@
   }
 }
 
-/* ── WhatsApp Pulse ── */
-@keyframes whatsapp-pulse {
-  0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-  70% { box-shadow: 0 0 0 18px rgba(37, 211, 102, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+/* ── WhatsApp Pulse (GPU Composited Animation) ── */
+.whatsapp-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  border-radius: 9999px;
+  background-color: rgba(37, 211, 102, 0.55);
+  z-index: -1;
+  animation: whatsapp-pulse-gpu 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+  will-change: transform, opacity;
+  pointer-events: none;
 }
-.whatsapp-pulse {
-  animation: whatsapp-pulse 2s infinite;
+@keyframes whatsapp-pulse-gpu {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
 }
 
 /* ── Dot Pattern Background ── */

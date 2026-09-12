@@ -6,6 +6,8 @@ export default defineConfig({
   build: {
     target: 'esnext',
     cssCodeSplit: true,
+    minify: 'esbuild',
+    cssMinify: true,
     rollupOptions: {
       output: {
         manualChunks: {
@@ -17,3 +19,4 @@ export default defineConfig({
     }
   }
 })
+
