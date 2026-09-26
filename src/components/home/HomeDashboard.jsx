@@ -12,7 +12,9 @@ import {
   Star,
   Target,
   Eye,
-  Compass
+  Compass,
+  BookOpen,
+  MessageCircle
 } from 'lucide-react'
 
 import { lazy, Suspense } from 'react'
@@ -26,6 +28,7 @@ const ContactSection = lazy(() => import('./ContactSection'))
 
 import { services } from '../../data/services'
 import { testimonials } from '../../data/testimonials'
+import { blogs } from '../../data/blogs'
 
 import { 
   DOCTOR_NAME, 
@@ -317,7 +320,95 @@ export default function HomeDashboard({ setActiveTab }) {
         <ClinicTimings />
       </Suspense>
 
-      {/* 8. Patient Reviews Quick Snippet */}
+      {/* 8. Latest Health Blog / Medical Article Section */}
+      <section className="py-16 bg-gradient-to-b from-emerald-50/40 via-white to-gray-50 border-b border-gray-100 font-hindi">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4">
+            <div>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 shadow-sm">
+                <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
+                नवीनतम स्वास्थ्य ब्लॉग (Latest Health Article)
+              </span>
+              <h3 className="text-xl sm:text-3xl font-extrabold text-gray-900 mt-2">
+                डॉ. राजेश पाठक का विशेष लेख
+              </h3>
+            </div>
+            <button
+              onClick={() => {
+                setActiveTab('blogs')
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+              className="text-xs sm:text-sm font-bold text-emerald-700 hover:text-emerald-900 flex items-center gap-1.5 self-start sm:self-auto"
+            >
+              सभी स्वास्थ्य लेख देखें <ArrowRight className="w-4 h-4" />
+            </button>
+          </div>
+
+          {/* Featured Article Card */}
+          {blogs[0] && (
+            <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-xl border border-gray-100 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden aspect-[16/10] bg-gray-100 relative shadow-md">
+                <picture>
+                  <source srcSet={blogs[0].image} type="image/webp" />
+                  <img 
+                    src={blogs[0].imageJpg} 
+                    alt={blogs[0].titleHi} 
+                    className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </picture>
+                <div className="absolute top-3 left-3 bg-emerald-950/85 backdrop-blur-sm text-emerald-200 text-xs px-3 py-1 rounded-full font-bold">
+                  {blogs[0].category}
+                </div>
+              </div>
+
+              <div className="lg:col-span-7 space-y-4">
+                <div className="text-xs text-gray-500 flex items-center gap-3">
+                  <span>{blogs[0].date}</span>
+                  <span>•</span>
+                  <span>{blogs[0].readTime}</span>
+                </div>
+
+                <h4 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug">
+                  {blogs[0].titleHi}
+                </h4>
+
+                <div className="p-4 rounded-xl bg-emerald-50/80 border-l-4 border-emerald-600 text-sm text-emerald-900 font-medium italic">
+                  "{blogs[0].exactDoctorQuote}"
+                </div>
+
+                <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
+                  {blogs[0].summary}
+                </p>
+
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <button
+                    onClick={() => {
+                      setActiveTab('blogs')
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-xs sm:text-sm shadow-md transition"
+                  >
+                    <span>पूरा ब्लॉग पढ़ें (Read Full Article)</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </button>
+                  <a
+                    href={WHATSAPP_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-800 rounded-xl font-bold text-xs sm:text-sm border border-emerald-200 transition"
+                  >
+                    <MessageCircle className="w-4 h-4 text-emerald-700" />
+                    <span>WhatsApp पर परामर्श लें</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+
+      {/* 9. Patient Reviews Quick Snippet */}
       <section className="py-16 bg-white border-b border-gray-100 font-hindi">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">

@@ -20,6 +20,7 @@ const PatientReviews = lazy(() => import('./components/home/PatientReviews'))
 const FAQ = lazy(() => import('./components/home/FAQ'))
 const ContactSection = lazy(() => import('./components/home/ContactSection'))
 const PrivacyPolicy = lazy(() => import('./components/home/PrivacyPolicy'))
+const BlogSection = lazy(() => import('./components/home/BlogSection'))
 
 
 function App() {
@@ -40,7 +41,7 @@ function App() {
     reviews: { hi: 'मरीजों की संतुष्टि एवं 4.9★ Google समीक्षाएं', en: 'Patient Reviews & Experiences (4.9★)' },
 
     contact: { hi: 'सीधा संपर्क, क्लिनिक पता एवं अपॉइंटमेंट', en: 'Contact Us • Clinic Locations & Map' },
-
+    blogs: { hi: 'स्वास्थ्य एवं होम्योपैथी ब्लॉग (Health Blogs)', en: 'Medical Articles & Health Insights' },
     privacy: { hi: 'गोपनीयता नीति एवं मरीज डेटा सुरक्षा', en: 'Privacy Policy & Terms of Service' },
   }
 
@@ -142,7 +143,12 @@ function App() {
                 </>
               )}
 
-              {/* 9. PRIVACY POLICY TAB */}
+              {/* 9. BLOGS TAB */}
+              {activeTab === 'blogs' && (
+                <BlogSection setActiveTab={setActiveTab} />
+              )}
+
+              {/* 10. PRIVACY POLICY TAB */}
               {activeTab === 'privacy' && (
                 <PrivacyPolicy setActiveTab={setActiveTab} />
               )}

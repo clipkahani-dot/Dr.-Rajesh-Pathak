@@ -33,6 +33,7 @@ export default function Navbar({ activeTab, setActiveTab }) {
     { id: 'home', nameEn: 'Home', nameHi: 'मुख्य' },
     { id: 'about', nameEn: 'About Doctor', nameHi: 'परिचय' },
     { id: 'services', nameEn: '20 Diseases', nameHi: '20 बीमारियां' },
+    { id: 'blogs', nameEn: 'Health Blogs', nameHi: 'स्वास्थ्य ब्लॉग' },
     { id: 'process', nameEn: 'Process', nameHi: 'प्रक्रिया' },
     { id: 'team', nameEn: 'Doctor Team', nameHi: 'टीम' },
     { id: 'gallery', nameEn: 'Certificates', nameHi: 'प्रमाण पत्र' },
