@@ -110,20 +110,22 @@ export default function BlogSection({ setActiveTab }) {
               </h1>
 
               {/* Author Badge */}
-              <div className="flex items-center gap-3.5 my-6 p-4 rounded-2xl bg-emerald-50/70 border border-emerald-100">
+              <div className="flex items-center gap-3.5 my-6 p-3.5 sm:p-4 rounded-2xl bg-emerald-50/70 border border-emerald-100 shadow-sm">
                 <img 
                   src={selectedBlog.authorImage} 
                   alt={selectedBlog.author}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-emerald-500 shadow-sm"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-emerald-500 shadow-sm flex-shrink-0"
                 />
-                <div>
-                  <h4 className="text-sm font-bold text-gray-900 font-hindi flex items-center gap-1">
-                    {selectedBlog.author}
-                    <ShieldCheck className="w-4 h-4 text-emerald-600 inline" />
+                <div className="min-w-0">
+                  <h4 className="text-sm sm:text-base font-bold text-gray-900 font-hindi flex items-center gap-1.5 flex-wrap">
+                    <span>{selectedBlog.author}</span>
+                    <ShieldCheck className="w-4 h-4 text-emerald-600 flex-shrink-0 inline" />
                   </h4>
-                  <p className="text-xs text-gray-600 font-hindi">
-                    {selectedBlog.authorRole}
-                  </p>
+                  {selectedBlog.authorRole && (
+                    <p className="text-xs text-gray-600 font-hindi mt-0.5">
+                      {selectedBlog.authorRole}
+                    </p>
+                  )}
                 </div>
               </div>
 

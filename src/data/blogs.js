@@ -12,8 +12,8 @@ export const blogs = [
     featured: true,
     image: '/images/blogs/diabetes-metabolic-syndrome.webp',
     imageJpg: '/images/blogs/diabetes-metabolic-syndrome.jpg',
-    author: 'Dr. Rajesh Pathak MD (Hom.)',
-    authorRole: 'Lead Consultant, Researcher & Assistant Professor',
+    author: 'Dr Rajesh Pathak MD Homoeopath',
+    authorRole: '',
     authorImage: '/images/doctor/dr-rajesh-pathak-portrait.webp',
     
     // Exact quote from Dr. Rajesh Pathak
@@ -77,7 +77,7 @@ export const blogs = [
       {
         heading: '5. डॉ. राजेश पाठक का मरीज़ों के लिए संदेश',
         paragraphs: [
-          '"डरे नहीं, जागरूक बनें। अपनी दिनचर्या को अनुशासित करें और सही होम्योपैथिक मार्गदर्शन लें। डायबिटीज से डरने की नहीं, बल्कि अपने जीवन को स्वस्थ नियमों में ढालने की ज़रूरत है।" — डॉ. राजेश पाठक M.D. (Hom.)'
+          '"डरे नहीं, जागरूक बनें। अपनी दिनचर्या को अनुशासित करें और सही होम्योपैथिक मार्गदर्शन लें। डायबिटीज से डरने की नहीं, बल्कि अपने जीवन को स्वस्थ नियमों में ढालने की ज़रूरत है।" — Dr Rajesh Pathak MD Homoeopath'
         ]
       }
     ]
