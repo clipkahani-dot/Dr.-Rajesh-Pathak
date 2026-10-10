@@ -5,7 +5,7 @@
   <!-- 1. Main Homepage & Patient Portal -->
   <url>
     <loc>https://drrajeshpathak.com/</loc>
-    <lastmod>2026-09-26</lastmod>
+    <lastmod>2026-10-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -19,9 +19,19 @@
       <image:caption>Assistant Professor &amp; Senior Homeopathic Consultant Surat</image:caption>
     </image:image>
     <image:image>
+      <image:loc>https://drrajeshpathak.com/images/blogs/high-blood-pressure-physiological-adjustment.jpg</image:loc>
+      <image:title>High Blood Pressure Physiological Adjustment Homeopathy Dr Rajesh Pathak</image:title>
+      <image:caption>Medical Health Blog on Blood Pressure and Cardiac Health</image:caption>
+    </image:image>
+    <image:image>
       <image:loc>https://drrajeshpathak.com/images/blogs/diabetes-metabolic-syndrome.jpg</image:loc>
       <image:title>Diabetes Metabolic Syndrome Homeopathy Treatment Dr Rajesh Pathak</image:title>
       <image:caption>Medical Health Blog on Diabetes Lifestyle Reversal</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drrajeshpathak.com/images/certificates/world-mental-health-day-camp.jpg</image:loc>
+      <image:title>World Mental Health Day Free Checkup Camp Certificate Dr Rajesh Pathak</image:title>
+      <image:caption>C D Pachchigar College and Devkinandan Hindi Vidhyalay Certificate</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://drrajeshpathak.com/images/gallery/vibrant-hospital-building.jpg</image:loc>

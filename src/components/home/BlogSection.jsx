@@ -26,7 +26,7 @@ import {
 } from '../../utils/constants'
 
 export default function BlogSection({ setActiveTab }) {
-  // Currently active/selected blog (default to latest/featured)
+  // Currently active/selected blog (default to latest)
   const [selectedBlog, setSelectedBlog] = useState(blogs[0])
 
   const handleShareWhatsApp = (blog) => {
@@ -34,12 +34,17 @@ export default function BlogSection({ setActiveTab }) {
     window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank')
   }
 
+  const handleSelectBlog = (blog) => {
+    setSelectedBlog(blog)
+    window.scrollTo({ top: 150, behavior: 'smooth' })
+  }
+
   return (
     <section className="py-12 bg-gradient-to-b from-gray-50 via-white to-gray-50 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 mb-3 shadow-sm">
             <BookOpen className="w-3.5 h-3.5 text-emerald-700" />
             <span>स्वास्थ्य एवं होम्योपैथी ब्लॉग श्रृंखला • डॉ. राजेश पाठक</span>
@@ -50,6 +55,34 @@ export default function BlogSection({ setActiveTab }) {
           <p className="mt-2 text-sm sm:text-base text-gray-600 font-hindi">
             जानिए जटिल और पुरानी बीमारियों के स्थायी समाधान, सही खान-पान और शास्त्रीय होम्योपैथी के वैज्ञानिक सिद्धांत।
           </p>
+
+          {/* Multi-Blog Selector Tabs */}
+          {blogs.length > 1 && (
+            <div className="flex flex-wrap items-center justify-center gap-2.5 mt-6">
+              {blogs.map((b) => {
+                const isActive = selectedBlog.id === b.id
+                return (
+                  <button
+                    key={b.id}
+                    onClick={() => handleSelectBlog(b)}
+                    className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold font-hindi transition-all duration-200 flex items-center gap-2 shadow-sm ${
+                      isActive
+                        ? 'bg-emerald-700 text-white shadow-emerald-700/25 scale-105 ring-2 ring-emerald-500'
+                        : 'bg-white text-gray-700 hover:bg-emerald-50 hover:text-emerald-800 border border-gray-200'
+                    }`}
+                  >
+                    <HeartPulse className={`w-3.5 h-3.5 ${isActive ? 'text-emerald-300' : 'text-emerald-600'}`} />
+                    <span>{b.category}</span>
+                    {b.id === 2 && (
+                      <span className="px-1.5 py-0.5 text-[10px] bg-amber-400 text-amber-950 rounded font-bold uppercase tracking-wider">
+                        नया
+                      </span>
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+          )}
         </div>
 
         {/* Main Article Card (Detailed Reading View) */}
@@ -210,7 +243,7 @@ export default function BlogSection({ setActiveTab }) {
                     <span>घर बैठे व्यक्तिगत परामर्श</span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-bold font-hindi">
-                    क्या आप या आपके परिजन डायबिटीज या मेटाबॉलिक सिंड्रोम से पीड़ित हैं?
+                    क्या आप या आपके परिजन {selectedBlog.category} की समस्या से पीड़ित हैं?
                   </h3>
                   <p className="text-xs sm:text-sm text-emerald-100 font-hindi">
                     डॉ. राजेश पाठक एवं 10+ डॉक्टरों की टीम से 2 घंटे की विस्तृत केस-टेकिंग और संपूर्ण प्राकृतिक उपचार परामर्श प्राप्त करें।
@@ -241,6 +274,47 @@ export default function BlogSection({ setActiveTab }) {
 
             </div>
           </article>
+        )}
+
+        {/* Other Articles Section (Cards Grid) */}
+        {blogs.length > 1 && (
+          <div className="max-w-4xl mx-auto mb-12">
+            <h3 className="text-xl font-bold text-gray-900 font-hindi mb-6 flex items-center gap-2">
+              <BookOpen className="w-5 h-5 text-emerald-700" />
+              <span>अन्य स्वास्थ्य लेख (Other Health Articles):</span>
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {blogs.map((b) => (
+                <div
+                  key={b.id}
+                  onClick={() => handleSelectBlog(b)}
+                  className={`bg-white rounded-2xl p-5 border cursor-pointer transition-all duration-300 shadow-sm hover:shadow-md ${
+                    selectedBlog.id === b.id
+                      ? 'border-emerald-600 ring-2 ring-emerald-500/30'
+                      : 'border-gray-200 hover:border-emerald-300'
+                  }`}
+                >
+                  <div className="aspect-[16/9] rounded-xl overflow-hidden bg-gray-100 mb-4 relative">
+                    <picture>
+                      <source srcSet={b.image} type="image/webp" />
+                      <img src={b.imageJpg} alt={b.titleHi} className="w-full h-full object-cover" />
+                    </picture>
+                    <div className="absolute top-2 left-2 bg-emerald-900/80 text-white text-[11px] font-bold px-2.5 py-1 rounded-full">
+                      {b.category}
+                    </div>
+                  </div>
+                  <div className="text-xs text-gray-500 mb-1.5">{b.date} • {b.readTime}</div>
+                  <h4 className="font-bold text-gray-900 font-hindi text-sm line-clamp-2 mb-2">
+                    {b.titleHi}
+                  </h4>
+                  <div className="text-xs text-emerald-700 font-bold flex items-center gap-1">
+                    <span>{selectedBlog.id === b.id ? 'अभी पढ़ रहे हैं (Currently Reading)' : 'आर्टिकल पढ़ें'}</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         )}
 
       </div>

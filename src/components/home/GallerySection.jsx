@@ -72,6 +72,15 @@ export default function GallerySection() {
       featured: true
     },
     {
+      src: '/images/certificates/world-mental-health-day-camp.webp',
+      title: 'World Mental Health Day — Free Check-up Camp (204 Students)',
+      subtitle: 'Devkinandan Hindi Vidhyalay & C D Pachchigar Homoeopathy Medical College — Certificate of Appreciation presented to Dr. Rajesh Pathak & Team (9 Oct 2026)',
+      tag: '🧠 Mental Health Day 2026',
+      category: 'certificates',
+      location: 'Devkinandan Vidhya Sankul, Bamroli Road, Surat',
+      featured: true
+    },
+    {
       src: '/images/certificates/viksit-bharat-certificate.webp',
       title: 'Viksit Bharat Young Leaders Dialogue 2027',
       subtitle: 'Ministry of Youth Affairs & Sports (Govt. of India / MYBharat) — Certificate of Participation (10 September 2026)',
