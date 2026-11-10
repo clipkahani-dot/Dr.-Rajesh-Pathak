@@ -73,7 +73,7 @@ export default function BlogSection({ setActiveTab }) {
                   >
                     <HeartPulse className={`w-3.5 h-3.5 ${isActive ? 'text-emerald-300' : 'text-emerald-600'}`} />
                     <span>{b.category}</span>
-                    {b.id === 2 && (
+                    {b.isNew && (
                       <span className="px-1.5 py-0.5 text-[10px] bg-amber-400 text-amber-950 rounded font-bold uppercase tracking-wider">
                         नया
                       </span>

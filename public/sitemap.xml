@@ -5,7 +5,7 @@
   <!-- 1. Main Homepage & Patient Portal -->
   <url>
     <loc>https://drrajeshpathak.com/</loc>
-    <lastmod>2026-10-10</lastmod>
+    <lastmod>2026-11-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,6 +17,11 @@
       <image:loc>https://drrajeshpathak.com/images/doctor/dr-rajesh-pathak-portrait.jpg</image:loc>
       <image:title>Dr. Rajesh Pathak MD - Classical Homoeopath</image:title>
       <image:caption>Assistant Professor &amp; Senior Homeopathic Consultant Surat</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://drrajeshpathak.com/images/blogs/thyroid-metabolic-energy-deficiency.jpg</image:loc>
+      <image:title>Thyroid Metabolic Imbalance Energy Deficiency Homeopathy Dr Rajesh Pathak</image:title>
+      <image:caption>Medical Health Blog on Thyroid Metabolism and Energy Deficiency Reversal</image:caption>
     </image:image>
     <image:image>
       <image:loc>https://drrajeshpathak.com/images/blogs/high-blood-pressure-physiological-adjustment.jpg</image:loc>
